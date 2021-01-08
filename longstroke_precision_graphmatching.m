@@ -11,6 +11,7 @@ alphas = [0, 0.0025, 0.0075, 0.0125];
 
 for i=1:4
     suffixes = {'alpha0', 'alpha1', 'alpha2', 'alpha3'};
+    i=4
 
     suffix = char(suffixes(i));
     S1S2_np=load(strcat(data_dir, 'cols_S1S2_', suffix, '.txt'));
