@@ -20,7 +20,7 @@ function [sums] = yeonetwork_remaps(remapping_freqs)
     yeo_labels=[r;l];
     yeo_networks=[networksr; networksl];
     
-    organized_matrix = remapping_freqs(yeo_labels,yeo_labels)
+    organized_matrix = remapping_freqs(yeo_labels,yeo_labels);
     organized_matrixll = organized_matrix(135:268,135:268);
     organized_matrixrr = organized_matrix(1:134,1:134);
     organized_matrixlr = organized_matrix(135:268,1:134);
