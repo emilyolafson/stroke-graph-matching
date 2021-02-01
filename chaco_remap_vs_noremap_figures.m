@@ -15,10 +15,11 @@ mean_chacovol=mean(cell2mat(chacovol'));
 data_dir=strcat(curr_dir, '/results/jupyter/precision/stroke/');
 alphas = [0, 0.0025, 0.0075, 0.0125];
 suffixes = {'alpha0', 'alpha1', 'alpha2', 'alpha3'};
+suffixes_2 = {'beta0', 'beta1', 'beta2', 'beta3'};
+
+suffix = strcat(char(suffixes(d)),'_',char(suffixes_2(q)));
 
 results_dir=strcat(curr_dir, '/results/jupyter/precision/stroke/', suffix, '/');
-suffixes_2 = {'beta0', 'beta1', 'beta2', 'beta3'};
-suffix = strcat(char(suffixes(d)),'_',char(suffixes_2(q)));
 
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_', suffix, '.txt'));
 S2S3_np=load(strcat(data_dir, 'cols_S2S3_', suffix, '.txt'));
@@ -90,8 +91,10 @@ for i=1:23
         title(['p = ', num2str(p(i)), ', stat = ', num2str(stat.tstat)])
     end
     tstat_12(i)=stat.tstat;
-
 end
+
+
+
 saveas(gcf, strcat(results_dir, 'figures/S1S2_sub_specific_remaps_vs_chaco.png'))
 
 
@@ -258,6 +261,43 @@ for i=1:23
 end
 saveas(gcf, strcat(results_dir, 'figures/S1S2_sub_specific_remaps_vs_chaco-log.png'))
 
+r=[]; nr=[]; x=[]; status=[]; allstatus=[]; allx=[]; sub=[]
+for i=1:23
+    r=log(chaco_remap{i});
+    nr=log(chaco_noremap{i});
+    x=[r, nr];
+    status=[repmat({'remap'},1,size(log10(chaco_remap{i}),2)),repmat({'no remap'},1,size(log10(chaco_noremap{i}),2))];
+    
+    %disp(size(log(chaco_remap{i}),2))
+    %disp(size(log(chaco_noremap{i}),2))
+    %sizes_r=[sizes_r, ones(1,size(log(chaco_remap{i}),2))*i]
+    %sizes_nr=[sizes_nr, ones(1,size(log(chaco_noremap{i}),2))*i];
+    allx=[allx, r, nr];
+    allstatus=[allstatus,status];
+    sub=[sub, repmat({['sub',num2str(i)]}, 1, 268)]
+end
+
+
+boxplot(allx, allstatus)
+hold on;
+set(gca, 'FontSize', 20)
+ylim([-18 0])
+yticks([ -15, -10, -5, 0])
+yticklabels({'10^{-15}','10^{-10}','10^{-5}'})
+ylabel('log ChaCo scores')
+
+[h, p, ~, stat]=ttest2(log(cell2mat(chaco_remap)), log(cell2mat(chaco_noremap)))
+
+
+boxplot(x,status)
+
+nexttile;
+remap=cellstr(remap');
+
+    
+sub= repmat({'sub1' 'sub2' 'sub3' 'sub4' 'sub5' 'sub6' 'sub7' 'sub8' 'sub8' 'sub8' 'sub8' 'sub8' 'sub8' 'sub8' 'sub8' 'sub8' 'sub8' 'sub8' 'sub8' 'sub20' 'sub21' 'sub22' 'sub23'},1,2);
+
+boxplot(x, status)
 
 for i=1:23 % across subjects
     subchaco=chacovol{i};

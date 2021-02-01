@@ -110,7 +110,7 @@ for i=1:4
     %% Correlate remap frequency with chaco scores.
     %log(chaco) vs remapping - can you make the points three colors indicating cerebellum
     % motor/premotor/somatosensory and other cortex?
-
+    close all;
     clear chacovol
 
     for i=1:23
@@ -119,78 +119,92 @@ for i=1:4
 
     mean_chacovol=mean(cell2mat(chacovol'));
 
-    [rho,p]=corr(S1S2_np,mean_chacovol');
+    [rho,p]=corr(S1S2_np,log(mean_chacovol'));
     rho1=rho;
     p1=p;
-    [rho,p]=corr(S2S3_np,mean_chacovol');
+    [rho,p]=corr(S2S3_np,log(mean_chacovol'));
     rho2=rho;
     p2=p;
-    [rho,p]=corr(S3S4_np,mean_chacovol');
+    [rho,p]=corr(S3S4_np,log(mean_chacovol'));
     rho3=rho;
     p3=p;
-    [rho,p]=corr(S4S5_np,mean_chacovol');
+    [rho,p]=corr(S4S5_np,log(mean_chacovol'));
     rho4=rho;
     p4=p;
 
-    results.corr_w_chaco.s1s2.p=p1;
-    results.corr_w_chaco.s1s2.rho=rho1;
-    results.corr_w_chaco.s2s3.p=p2;
-    results.corr_w_chaco.s2s3.rho=rho2;
-    results.corr_w_chaco.s3s4.p=p3;
-    results.corr_w_chaco.s3s4.rho=rho3;
-    results.corr_w_chaco.s4s5.p=p4;
-    results.corr_w_chaco.s4s5.rho=rho4;
+    results.corr_w_chaco.s1s2.p=p1
+    results.corr_w_chaco.s1s2.rho=rho1
+    results.corr_w_chaco.s2s3.p=p2
+    results.corr_w_chaco.s2s3.rho=rho2
+    results.corr_w_chaco.s3s4.p=p3
+    results.corr_w_chaco.s3s4.rho=rho3
+    results.corr_w_chaco.s4s5.p=p4
+    results.corr_w_chaco.s4s5.rho=rho4
 
-    figure('Position', [0 0 1400 700]) 
+    figure('Position', [0 0 700 800]) 
 
-    tiledlayout(1,4,'padding', 'none')
+    tiledlayout(2,2,'padding', 'none')
     nexttile;
-    plot(S1S2_np,mean_chacovol, 'ko')
+    scatter(S1S2_np,log(mean_chacovol), 'ko', 'filled', 'MarkerFaceAlpha', 0.8)
     xlabel('Remap frequency')
-    ylabel('Mean ChaCo')
+    ylabel('log(mean ChaCo)')
     title('S1-S2')
-    ylim([0 0.02])
-    b=polyfit(S1S2_np, mean_chacovol,1);
+    ylim([-14, 0])
+     yticks([-14  -10 -6 -2 ])
+    yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
+    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s1s2.rho, 3))],['p: ', num2str(round(results.corr_w_chaco.s1s2.p, 6))]}, 'FontSize', 15)
+    b=polyfit(S1S2_np, log(mean_chacovol),1);
     a=polyval(b,S1S2_np);
     hold on;
     plot(S1S2_np, a, '-r')
-    set(gca, 'FontSize', 13)
+    set(gca, 'FontSize', 15)
 
     nexttile;
-    plot(S2S3_np,mean_chacovol, 'ko')
+    scatter(S2S3_np,log(mean_chacovol), 'ko', 'filled', 'MarkerFaceAlpha', 0.8)
     xlabel('Remap frequency')
-    ylabel('Mean ChaCo')
+    ylabel('log(mean ChaCo)')
     title('S2-S3')
-    ylim([0 0.02])
-    b=polyfit(S2S3_np, mean_chacovol,1);
+    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s2s3.rho, 3))],['p: ', num2str(round(results.corr_w_chaco.s2s3.p, 6))]}, 'FontSize', 15)
+  
+   yticks([-14  -10 -6 -2 ])
+    yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
+    ylim([-14, 0])
+    b=polyfit(S2S3_np, log(mean_chacovol),1);
     a=polyval(b,S2S3_np);
     hold on;
     plot(S2S3_np, a, '-r')
-    set(gca, 'FontSize', 13)
+    set(gca, 'FontSize', 15)
 
     nexttile;
-    plot(S3S4_np,mean_chacovol, 'ko')
+    scatter(S3S4_np,log(mean_chacovol), 'ko', 'filled', 'MarkerFaceAlpha', 0.8)
     xlabel('Remap frequency')
-    ylabel('Mean ChaCo')
+    ylabel('log(mean ChaCo)')
     title('S3-S4')
-    ylim([0 0.02])
-    b=polyfit(S3S4_np, mean_chacovol,1);
+    ylim([-14, 0])
+    yticks([-14  -10 -6 -2 ])
+    yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
+    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s3s4.rho, 3))],['p: ', num2str(round(results.corr_w_chaco.s3s4.p, 6))]}, 'FontSize', 15)
+    b=polyfit(S3S4_np, log(mean_chacovol),1);
     a=polyval(b,S3S4_np);
     hold on;
     plot(S3S4_np, a, '-r')
-    set(gca, 'FontSize', 13)
+    set(gca, 'FontSize', 15)
 
     nexttile;
-    plot(S4S5_np,mean_chacovol, 'ko')
+    scatter(S4S5_np,log(mean_chacovol), 'ko', 'filled', 'MarkerFaceAlpha', 0.8)
     xlabel('Remap frequency')
-    ylabel('Mean ChaCo score')
+    ylabel('log(mean ChaCo)')
+    yticks([-14  -10 -6 -2 ])
+    yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
     title('S4-S5')
-    ylim([0 0.02])
-    b=polyfit(S4S5_np, mean_chacovol,1);
+    ylim([-14, 0])
+    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s4s5.rho, 3))],['p: ', num2str(round(results.corr_w_chaco.s4s5.p, 6))]}, 'FontSize', 15)
+    idx=isnan(log(mean_chacovol))
+    b=polyfit(S4S5_np, log(mean_chacovol),1);
     a=polyval(b,S4S5_np);
     hold on;
     plot(S4S5_np, a, '-r')
-    set(gca, 'FontSize', 13)
+    set(gca, 'FontSize', 15)
     
     sgtitle('Remap frequency (individual sessions) vs. mean ChaCo across subjects')
     saveas(gcf, strcat(results_dir, 'figures/corr_remapping_chaco.png'))
@@ -237,6 +251,9 @@ for i=1:4
     [rho1,p1]=corr(all_remaps', log(mean_chacovol)', 'Type', 'Spearman');
     results.corr_w_chaco_allsessions_log.pearson_p=p1;
     results.corr_w_chaco_allsessions_log.pearson_rho=rho1;
+    
+ 
+    
     %% remapping vs motor recovery
     fm_dir=strcat(pwd, '/data/');
     fuglmeyer=readtable(strcat(fm_dir, 'fuglmeyer_allpts.csv'));
@@ -269,29 +286,46 @@ for i=1:4
     sum45(6)=NaN;
 
     sum_all_swaps=[sum12, sum23, sum34, sum45];
-    totalswap=sum(sum_all_swaps,2);
+    totalswap=sum(sum_all_swaps,2)
+    
+   %% lesion vol. vs remaps
+    lesionvol = load('allpts_lesionvol.txt')
+    vol=lesionvol(:,1);
+    
+    [rho,p]=corr(sum12, cell2mat(lesionload), 'rows','complete')
+    
+    [rho, p]=corr(fm_1,vol, 'rows', 'complete')
+    
+    [rho,p]=corr(sum23, vol, 'rows', 'complete')
+    [rho,p]=corr(sum34, vol, 'rows', 'complete')
+    [rho,p]=corr(sum45, vol, 'rows', 'complete')
 
+    [rho,p]=corr(fm_1, sum12, 'rows', 'complete')
+    
     % baseline impairment vs. sum of swaps 1 to 2.
-    figure('Position', [0 0 700 700])
-    plot(sum12(1:21), fm_1(1:21), 'ko')
+    figure('Position', [0 0 500 500])
+    scatter(sum12(1:21), fm_1(1:21), 'ko', 'filled')
     hold on;
     b=polyfit(sum12(1:21), fm_1(1:21),1);
     a=polyval(b,sum12(1:21));
     plot(sum12(1:21), a, '-r')
     [rho,p]=corr(sum12(1:21),fm_1(1:21), 'Type', 'Pearson');
-    title('Baseline Fugl-Meyer scores vs. Sum of remaps S2-S1')
-    xlabel('Total # swaps')
+    title({'Baseline Fugl-Meyer scores vs.' ,'sum of remaps S2-S1'})
+    xlabel('Total # remaps')
     ylabel('Baseline F-M score')
+    xlim([0 200])
     ylim([0 105])
-    set(gca, 'FontSize', 13)
+    text(75, 90, {['Rho: ', num2str(round(rho,3))]}, 'FontSize', 20)
+    text(145, 84, {['p: ', num2str(round(p, 3))]}, 'FontSize', 20)
+    set(gca, 'FontSize', 20)
     results.baselineFM_remaps_s1s2.p=p;
     results.baselineFM_remaps_s1s2.rho=rho;
 
     saveas(gcf, strcat(results_dir, 'figures/baselineFM_remaps_s1s2.png'))
 
     % 6 month recovery recovery vs S1-S2 swaps.
-    figure('Position', [0 0 700 700])
-    plot(sum12, fm_5-fm_1,'ko')
+    figure('Position', [0 0 500 500])
+    scatter(sum12, fm_5-fm_1,'ko', 'filled')
     [rho,p]=corr(sum12,fm_5-fm_1,'rows', 'complete');
     hold on;
     recovery=fm_5-fm_1;
@@ -299,10 +333,12 @@ for i=1:4
     b=polyfit(sum12(~idx), recovery(~idx),1);
     a=polyval(b,sum12);
     plot(sum12, a, '-r')
-    xlabel('Total # swaps S1-S2')
+    xlabel('Total # remaps S1-S2')
     ylabel('Change in Fugl-Meyer (last baseline-followup)')
-    title('Baseline # swaps vs. 6 month difference in FM')
-    set(gca, 'FontSize', 13)
+    title({'Baseline # swaps vs', ' 6 month improvement motor scores'})
+    set(gca, 'FontSize', 20)
+    text(2, 90, {['Rho: ', num2str(round(rho,3))]}, 'FontSize', 20)
+    text(2, 84, {['p: ', num2str(round(p, 3))]}, 'FontSize', 20)
     results.baselineswaps_6monthFM.p=p;
     results.baselineswaps_6monthFM.rho=rho;
     
@@ -366,26 +402,25 @@ for i=1:4
     figure('Position', [0 0 1000 1000])
     tiledlayout(2,2)
     nexttile;
-    plot(sum12, fm12,'ko')
+    scatter(sum12, fm12,'ko', 'filled')
     [rho,p]=corr(sum12,fm12, 'rows', 'complete', 'Type', 'Pearson');
     results.corr_recovery_remap_sessionspecific.s1s2.p=p;
     results.corr_recovery_remap_sessionspecific.s1s2.rho=rho;
-
     hold on;
     idx=isnan(fm12);
     b=polyfit(sum12(~idx), fm12(~idx),1);
     a=polyval(b,sum12);
     plot(sum12, a, '-r')
-    title('S1-S2 recovery (FM2-FM1) vs. sum of remapps S1-S2')
+    title({'FM2-FM1 vs','# remaps S1-S2'})
     xlabel('Sum of remaps')
-    ylabel('Change in FM score (followup - baseline')
-    text(60, -20, ['rho=', num2str(round(rho,3)), ', p=', num2str(round(p,3))], 'FontSize', 15)
+    ylabel('\Delta FM score')
+    text(2, -20, {['Rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
     ylim([-40 80])
     xlim([0 150])
     set(gca,'FontSize', 15)
 
     nexttile;
-    plot(sum23, fm23,'ko')
+    scatter(sum23, fm23,'ko', 'filled')
     [rho,p]=corr(sum23,fm23, 'rows', 'complete', 'Type', 'Pearson');
     results.corr_recovery_remap_sessionspecific.s2s3.p=p;
     results.corr_recovery_remap_sessionspecific.s2s3.rho=rho;
@@ -394,16 +429,16 @@ for i=1:4
     b=polyfit(sum23(~idx), fm23(~idx),1);
     a=polyval(b,sum23);
     plot(sum23, a, '-r')
-    title('S2-S3 recovery (FM3-FM2) vs. sum of remaps S2-S3')
+    title({'FM3-FM2 vs','# remaps S2-S3'})
     xlabel('Sum of remaps')
-    ylabel('Change in FM score (followup - baseline')
-    text(70, -20, ['rho=', num2str(round(rho,3)), ', p=', num2str(round(p,3))], 'FontSize', 15)
+    ylabel('\Delta FM score')
+    text(2, -20, {['Rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
     ylim([-40 80])
     xlim([0 150])
     set(gca,'FontSize', 15)
 
     nexttile;
-    plot(sum34, fm34,'ko')
+    scatter(sum34, fm34,'ko', 'filled')
     [rho,p]=corr(sum34,fm34, 'rows', 'complete', 'Type', 'Pearson');
     results.corr_recovery_remap_sessionspecific.s3s4.p=p;
     results.corr_recovery_remap_sessionspecific.s3s4.rho=rho;
@@ -412,16 +447,16 @@ for i=1:4
     b=polyfit(sum34(~idx), fm34(~idx),1);
     a=polyval(b,sum34);
     plot(sum34, a, '-r')
-    title('S3-S4 recovery (FM4-FM3) vs. sum of remaps S3-S4')
+    title({'FM4-FM3 vs','# remaps S3-S4'})
     xlabel('Sum of remaps')
-    ylabel('Change in FM score (followup - baseline')
-    text(90, -20, ['rho=', num2str(round(rho,3)), ', p=', num2str(round(p,3))], 'FontSize', 15)
+    ylabel('\Delta FM score')
+    text(2, -20, {['Rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
     ylim([-40 80])
     xlim([0 150])
     set(gca,'FontSize', 15)
 
     nexttile
-    plot(sum45, fm45,'ko')
+    scatter(sum45, fm45,'ko', 'filled')
     [rho,p]=corr(sum45,fm45, 'rows', 'complete', 'Type', 'Pearson');
     results.corr_recovery_remap_sessionspecific.s4s5.p=p;
     results.corr_recovery_remap_sessionspecific.s4s5.rho=rho;
@@ -430,10 +465,10 @@ for i=1:4
     b=polyfit(sum45(~idx), fm45(~idx),1);
     a=polyval(b,sum45);
     plot(sum45, a, '-r')
-    title('S4-S5 recovery (FM5-FM4) vs. sum of remaps S4-S5')
+    title({'FM5-FM4 vs','# remaps S4-S5'})
     xlabel('Sum of remaps')
-    ylabel('Change in FM score (followup - baseline')
-    text(80, -20, ['rho=', num2str(round(rho,3)), ', p=', num2str(round(p,3))], 'FontSize', 15)
+    ylabel('\Delta FM score')
+    text(2, -20, {['Rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
     ylim([-40 80])
     xlim([0 150])
     set(gca,'FontSize', 15)

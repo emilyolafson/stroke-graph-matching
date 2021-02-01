@@ -8,7 +8,7 @@ data_dir=strcat(curr_dir, '/results/jupyter/precision/stroke/');
 alphas = [0, 0.0025, 0.0075, 0.0125];
 betas = [0, 0.0001, 0.0002, 0.0003];
 
-for d=1
+we wfor d=1
     for q=1:4
         suffixes = {'alpha0', 'alpha1', 'alpha2', 'alpha3'};
         suffixes_2 = {'beta0', 'beta1', 'beta2', 'beta3'};

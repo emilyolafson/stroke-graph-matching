@@ -1,5 +1,5 @@
 function [] = plot_yeo(matrix,tit, cmap, range, linecolor)
-    %load parcellation nodes
+    %plot_yeo(matrix,tit, cmap, range, linecolor)
     curr_dir=pwd;
 
     Lyeolabels=({'L - Medial frontal', 'L - Frontoparietal', 'L - Default mode', 'L - Subcortical-cerebellum','L - Motor', 'L - Visual I', 'L - Visual II','L - Visual association'});
