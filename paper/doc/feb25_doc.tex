@@ -1,0 +1,84 @@
+\documentclass[10pt]{article}
+
+%---------------------------------------------------------------------
+
+\usepackage[a4paper, headsep=0in,bindingoffset=0in,%
+left=0.7in,right=0.7in,top=0.7in,bottom=0.7in,%
+footskip=.25in]{geometry}
+
+\usepackage[english]{babel}   
+\usepackage[utf8]{inputenc}  
+\usepackage{sectsty}
+
+\usepackage{graphicx}
+\usepackage[
+backend=bibtex,
+style=numeric,
+sorting=none
+]{biblatex}
+\addbibresource{feb25bib.bib}
+
+\renewcommand{\baselinestretch}{1.3}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+%\setlength{\parskip}{0.5cm}
+
+\setlength{\headsep}{1pt}
+%---------------------------------------------------------------------
+
+\begin{document} 
+	\sectionfont{\large}
+	\title{Functional connectome reorganization after pontine stroke is associated with better motor  	outcomes}
+	\maketitle
+ 	\author{Emily Olafson, Keith Jamison, Hesheng Liu, Danhong Wang, Joel Bruss, Aaron Boes, Amy Kuceyeski}%, Keith Jamison, PhD\inst{1}, Hesheng Liu, MD\inst{2}, Danhong Wang, MD\inst{2},Joel Bruss, PhD\inst{3}, Aaron Boes, MD PhD\inst{3}, Amy Kuceyeski, PhD\inst{1}}
+	% E-MAILS
+	%\address{Weill Cornell Medical College, \inst{2} Harvard Medical School, \\ \inst{3}Massachusetts General Hospital, \inst{4}University of Iowa 
+	%}
+	
+	%---------------------------------------------------------------------
+	\section*{Introduction}
+	Motor deficits are the most common and disruptive symptoms of ischemic stroke, but spontaneous recovery of motor function occurs for most patients \cite{Duncan2000-uj}. This motor recovery is dependent on the ability of brain networks to functionally reorganize and compensate for lost brain areas \cite{Corbetta2005-ra}. As demonstrated by animal models, the functional role of motor regions damaged by stroke may be adopted by surviving tissue around the site of the lesion, but brain areas distant to the damaged tissue with similar function and connectivity as the lesion site have also been shown to compensate for lost function in animals, typically when the initial infarct is large \cite{Winship2009-af, Adam2020-jk, Murata2015-ss, Brown2009-jn}.
+	\\
+	
+	In humans, functional reorganization underlying post-stroke motor recovery has been studied with resting-state functional magnetic resonance imaging (fMRI). Strong evidence suggests that crucial to eventual motor recovery is the restoration of interhemispheric resting-state functional connectivity (FC) between the primary motor cortices \cite{Carter2010-er, Urbin2014-iq, Rehme2013-ap}, but less is known about how the brain’s functional networks change on a greater spatial and temporal scale after stroke. Altered network topology \cite{Wang2010-or} and recruitment of other networks aside from the motor network such as the frontoparietal network \cite{Hordacre2021-ct, Pool2018-px} have been implicated in the recovery process, but network changes at a high temporal resolution have not been well documented.
+	\\
+	
+	Prior studies investigating neural correlates of motor recovery have focused almost exclusively on supratentorial strokes that impact the internal capsule and surrounding areas. Evidence suggests that for pontine strokes, which impact the  connections between motor cortex and the cerebellu \cite{Lu2011-ow}, and account for roughly 7 percent of all ischemic strokes \cite{Saia2009-ik} sources of motor deficits as well as recovery-related reorganization might differ from those of supratentorial strokes. Reduced blood flow as measured by arterial spin labeling has been observed in the cerebellum and cortical regions in pontine stroke \cite{Wei2020-gj, Wang2019-jr} and longitudinally, changes in cerebral blood flow in cortical areas including the supramarginal gyrus and middle occipital gyrus were related to motor recovery. Areas with abnormal blood flow over time also had abnormal FC \cite{Wei2020-gj}, and increased degree centrality in the ipsilesional cerebellum has been related to better motor recovery \cite{Liu2019-mj}. The network changes associated with functional damage and subsequent recovery in pontine stroke have yet to be assessed in a longitudinal study.
+	\\
+	
+	Secondary damage due to diaschisis, which affects remote brain areas anatomically connected to the lesion, results in widespread disruption of functional networks \cite{Carrera2014-ah}. Functional impairment and subsequent reorganization of areas anatomically connected to the lesion may be an important component of the recovery process that has yet to be explored. In this study, we propose a novel measure to capture adaptive functional plasticity after pontine stroke, outlined below, and connect it to patterns of structural disruption after stroke. 
+	\\
+	
+	Connectivity to the rest of the brain is one aspect of a brain region's functional role in the network. We propose that instances of functional reorganization over time, as in the case of adjacent surviving tissue adopting the functional role of lost tissue, may be captured by identifying brain regions whose pattern of FC with the rest of the brain is more closely matched by a different brain region at a later date. Considering functional connectomes as graph, the task of identifying similar nodes (gray matter regions, in this case) between two functional connectomes can be considered a graph matching problem \cite{Conte2004-ro}. Graph matching has been applied recently to map individual structural connectomes to their functional connectomes \cite{Osmanlioglu2019-ao}. Conceptually, the process of graph matching exchanges the labels of nodes when doing so results increased similarity of the two networks. When two regions exchange FC profiles, the regions are said to have been ‘remapped’. We hypothesize that brain regions with more structural damage due to the lesion will more frequently functionally reorganize; that more impaired subjects will have more global functional reorganization; and that the amount of functional reorganization will correlate with the change in motor impairment between subsequent sessions.
+	
+
+	\section*{Methods} \label{sec:firstpage}
+	
+	Twenty-three individuals (34-68 years old;  9 males; 9 right-handed) with first-episode brainstem stroke were enrolled in the study. Participants’ motor recovery was assessed via the Fugl-Meyer, collected during five sessions across a period of 6 months (7, 14, 30, 90, 180 days post-stroke). Resting-state functional MRI was also obtained for each of the five sessions; FCs were extracted via a regularized precision approach \cite{Liegeois2020-ua} over a 268 region atlas \cite{Finn2015-er}. In graph matching, a one-to-one correspondence between nodes (i.e. gray matter regions) in FCs from successive imaging sessions is determined based on maximizing the similarity of the two FCs (Figure 1a). A region that is assigned to a different region in the subsequent FCis considered to have been functionally remapped. Regional remapping frequencies were calculated as a proportion of the stroke subjects in which that region remapped. In addition,  the extent of regional structural (white matter) connectivity disruption due to the lesion was assessed for each stroke subject with the Network Modification (NeMo) Tool (Kuceyeski et al. 2013). The NeMo Tool  uses virtual tractography to calculate for each gray matter region the proportion of its streamlines that intersect with the lesion, aka the Change in Connectivity (ChaCo) score. 
+	
+	\section*{Results}
+	\begin{figure}[h]
+		\caption{A picture of a gull.}
+		\centering
+	%	\includegraphics[width=0.5\textwidth]{gull}
+	\end{figure}
+	
+	\section*{Discussion}
+	
+	\section*{Supplementary}
+	\subsection*{Supplementary Methods}
+	\subsection*{Supplementary Figures}
+	
+	%----------			-----------------------------------------------------------
+	\section*{Bibliography}
+
+	\printbibliography
+
+	
+	%---------------------------------------------------------------------
+	%\bibliographystyle{sbc}
+	%\bibliography{sbc-template}
+	
+\end{document}
