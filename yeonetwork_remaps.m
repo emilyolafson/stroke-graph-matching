@@ -9,13 +9,13 @@ function [sums] = yeonetwork_remaps(remapping_freqs)
     [f,l]=sort(left_a);
     networksl = f(:,2);
     for i=1:8
-        sizez(i)=sum(i==f(:,2))
+        sizez(i)=sum(i==f(:,2));
     end
-    l=l(:,2)+134
+    l=l(:,2)+134;
     right_a=a(1:134,:);
     [h,r]=sort(right_a);
     networksr = h(:,2);
-    r=r(:,2)
+    r=r(:,2);
     
     yeo_labels=[r;l];
     yeo_networks=[networksr; networksl];
