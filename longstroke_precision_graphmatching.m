@@ -4,7 +4,7 @@
 
 curr_dir=pwd;
 
-data_dir=strcat(curr_dir, '/results/jupyter/precision/stroke/');
+data_dir=strcat(curr_dir, '/project/results/');
 alphas = [0, 0.0025, 0.0075, 0.0125];
 
 % no_alpha, alpha1, alpha2, alpha3
@@ -21,7 +21,7 @@ for i=1:4
     S3S4_np=[S3S4_np(1:11,:);zeros(1,268); S3S4_np(12:18,:);zeros(1,268); S3S4_np(19:21,:)];
     S4S5_np=[S4S5_np(1:5,:);zeros(1,268); S4S5_np(6:10,:);zeros(1,268); S4S5_np(11:17,:);zeros(1,268); S4S5_np(18:20,:)];
 
-    results_dir=strcat(curr_dir, '/results/jupyter/precision/stroke/', suffix, '/');
+    results_dir=strcat(curr_dir, '/project/results/', suffix, '/');
 
     %% Get remapping matrices (1/0)
     order=0:267;
@@ -141,8 +141,7 @@ for i=1:4
     results.corr_w_chaco.s4s5.p=p4
     results.corr_w_chaco.s4s5.rho=rho4
 
-    figure('Position', [0 0 700 800]) 
-
+    figure('Position', [0 0 500 500]) 
     tiledlayout(2,2,'padding', 'none')
     nexttile;
     scatter(S1S2_np,log(mean_chacovol), 'ko', 'filled', 'MarkerFaceAlpha', 0.8)
@@ -152,7 +151,7 @@ for i=1:4
     ylim([-14, 0])
      yticks([-14  -10 -6 -2 ])
     yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
-    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s1s2.rho, 3))],['p: ', num2str(round(results.corr_w_chaco.s1s2.p, 6))]}, 'FontSize', 15)
+    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s1s2.rho, 3))],['p: ', sprintf(' %.2g ', results.corr_w_chaco.s1s2.p)]}, 'FontSize', 15)
     b=polyfit(S1S2_np, log(mean_chacovol),1);
     a=polyval(b,S1S2_np);
     hold on;
@@ -164,7 +163,7 @@ for i=1:4
     xlabel('Remap frequency')
     ylabel('log(mean ChaCo)')
     title('S2-S3')
-    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s2s3.rho, 3))],['p: ', num2str(round(results.corr_w_chaco.s2s3.p, 6))]}, 'FontSize', 15)
+    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s2s3.rho, 3))],['p: ', sprintf(' %.2g ', results.corr_w_chaco.s2s3.p)]}, 'FontSize', 15)
   
    yticks([-14  -10 -6 -2 ])
     yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
@@ -183,7 +182,7 @@ for i=1:4
     ylim([-14, 0])
     yticks([-14  -10 -6 -2 ])
     yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
-    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s3s4.rho, 3))],['p: ', num2str(round(results.corr_w_chaco.s3s4.p, 6))]}, 'FontSize', 15)
+    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s3s4.rho, 3))],['p: ',sprintf(' %.2g ', results.corr_w_chaco.s3s4.p)]}, 'FontSize', 15)
     b=polyfit(S3S4_np, log(mean_chacovol),1);
     a=polyval(b,S3S4_np);
     hold on;
@@ -198,7 +197,7 @@ for i=1:4
     yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
     title('S4-S5')
     ylim([-14, 0])
-    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s4s5.rho, 3))],['p: ', num2str(round(results.corr_w_chaco.s4s5.p, 6))]}, 'FontSize', 15)
+    text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s4s5.rho, 3))],['p: ', sprintf(' %.2g ', results.corr_w_chaco.s4s5.p)]}, 'FontSize', 15)
     idx=isnan(log(mean_chacovol))
     b=polyfit(S4S5_np, log(mean_chacovol),1);
     a=polyval(b,S4S5_np);
@@ -206,8 +205,9 @@ for i=1:4
     plot(S4S5_np, a, '-r')
     set(gca, 'FontSize', 15)
     
-    sgtitle('Remap frequency (individual sessions) vs. mean ChaCo across subjects')
+  %  sgtitle('Remap frequency (individual sessions) vs. mean ChaCo across subjects')
     saveas(gcf, strcat(results_dir, 'figures/corr_remapping_chaco.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_chaco.png')
 
 
     %%
@@ -223,30 +223,32 @@ for i=1:4
     results.corr_w_chaco_allsessions.pearson_p=p2;
     results.corr_w_chaco_allsessions.pearson_rho=rho2;
     
-    figure('Position', [0 0 700 700])
-    plot(all_remaps,mean_chacovol, 'ok')
+    figure('Position', [0 0 500 500])
+    scatter(all_remaps,mean_chacovol, 'k', 'filled')
     b=polyfit(all_remaps, mean_chacovol,1);
     a=polyval(b,all_remaps);
     hold on;
-    title('Remap frequency, averaged over all sessions vs. mean ChaCo across subjects')
+    title([{'Remap frequency averaged over all sessions'},{' vs. mean ChaCo across subjects'}])
     xlabel('Average remap freq. across time points')
     ylabel('Mean ChaCo score across subjects')
     set(gca, 'FontSize', 13)
     saveas(gcf, strcat(results_dir, 'figures/corr_remapping_chaco_allsessions.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_chaco_allsessions.png')
 
-    figure('Position', [0 0 700 700])
-    plot(all_remaps, log(mean_chacovol),'ok');
+    figure('Position', [0 0 500 500])
+    scatter(all_remaps, log(mean_chacovol),'k', 'filled');
     hold on;
     xlabel('Average remap freq. across time points')
     ylabel('Mean log(ChaCo) score across subjects')
     set(gca,'FontSize', 13)
-    title('Remap frequency, averaged over all sessions vs. mean log(ChaCo) across subjects')
+    title([{'Remap frequency averaged over all sessions'},{' vs. log(mean ChaCo) across subjects'}])
     plot(all_remaps, log(mean_chacovol), 'ok')
     b=polyfit(all_remaps,  log(mean_chacovol),1);
     a=polyval(b,all_remaps);
     plot(all_remaps, a, '-r')
 
     saveas(gcf, strcat(results_dir, 'figures/corr_remapping_chaco_allsessions_log.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_chaco_allsessions_log.png')
 
     [rho1,p1]=corr(all_remaps', log(mean_chacovol)', 'Type', 'Spearman');
     results.corr_w_chaco_allsessions_log.pearson_p=p1;
@@ -292,8 +294,45 @@ for i=1:4
     lesionvol = load('allpts_lesionvol.txt')
     vol=lesionvol(:,1);
     
-    [rho,p]=corr(sum12, cell2mat(lesionload), 'rows','complete')
+    figure('Position', [0 0 500 500])
+    scatter(sum12, vol, 'ko', 'filled')
+    hold on;
+    b=polyfit(sum12, vol,1);
+    a=polyval(b,sum12);
+    plot(sum12, a, '-r')
+    [rho,p]=corr(sum12,vol, 'Type', 'Pearson');
+    title({'Number of remaps S1-S2 vs.' ,'Lesion volume'})
+    xlabel('Total # remaps')
+    ylabel('Lesion volume')
+    text(10, 250, {['Correlation: ', num2str(round(rho,3))]}, 'FontSize', 20)
+    text(10, 230, {['p: ', sprintf('%.2g',p)]}, 'FontSize', 20)
+    set(gca, 'FontSize', 20)
+    saveas(gcf, strcat(results_dir, 'figures/lesionvol_remapss1s2.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remapss1s2.png')
+
     
+    lesionload=load('CSTlesionload.mat')
+    lesionload=lesionload.lesionload
+    
+    [rho,p]=corr(sum12, cell2mat(lesionload), 'rows','complete')
+   
+    figure('Position', [0 0 500 500])
+    scatter(sum12, cell2mat(lesionload), 'ko', 'filled')
+    hold on;
+    b=polyfit(sum12, cell2mat(lesionload),1);
+    a=polyval(b,sum12);
+    plot(sum12, a, '-r')
+    [rho,p]=corr(sum12,cell2mat(lesionload), 'Type', 'Pearson');
+    title({'Number of remaps S1-S2 vs.' ,'CST lesion load'})
+    xlabel('Total # remaps')
+    ylabel('Lesion load on CST')
+   % xlim([0 150])
+    text(3, 0.024, {['Correlation: ', num2str(round(rho,3))]}, 'FontSize', 20)
+    text(3, 0.022, {['p: ', sprintf('%.2g',p)]}, 'FontSize', 20)
+    set(gca, 'FontSize', 20)
+    saveas(gcf, strcat(results_dir, 'figures/lesionload_remapss1s2.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_remapss1s2.png')
+
     [rho, p]=corr(fm_1,vol, 'rows', 'complete')
     
     [rho,p]=corr(sum23, vol, 'rows', 'complete')
@@ -313,15 +352,16 @@ for i=1:4
     title({'Baseline Fugl-Meyer scores vs.' ,'sum of remaps S2-S1'})
     xlabel('Total # remaps')
     ylabel('Baseline F-M score')
-    xlim([0 200])
+  %  xlim([0 200])
     ylim([0 105])
-    text(75, 90, {['Rho: ', num2str(round(rho,3))]}, 'FontSize', 20)
-    text(145, 84, {['p: ', num2str(round(p, 3))]}, 'FontSize', 20)
+    text(75, 90, {['Correlation: ', num2str(round(rho,3))]}, 'FontSize', 20)
+    text(75, 84, {['p: ', num2str(round(p, 3))]}, 'FontSize', 20)
     set(gca, 'FontSize', 20)
     results.baselineFM_remaps_s1s2.p=p;
     results.baselineFM_remaps_s1s2.rho=rho;
 
     saveas(gcf, strcat(results_dir, 'figures/baselineFM_remaps_s1s2.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineFM_remaps_s1s2.png')
 
     % 6 month recovery recovery vs S1-S2 swaps.
     figure('Position', [0 0 500 500])
@@ -343,19 +383,31 @@ for i=1:4
     results.baselineswaps_6monthFM.rho=rho;
     
     saveas(gcf, strcat(results_dir, 'figures/baselineswaps_6monthFM.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineswaps_6monthFM.png')
 
     %%
     % What we want to test is whether the number of swaps from Session k to Session k+1
     % is correlated with the change in motor scores.
     figure('Position', [0 0 700 700])
-    imagesc([fm_1,fm_2,fm_3,fm_4,fm_5])
-    yticks(1:23)
+    motor=[fm_1,fm_2,fm_3,fm_4,fm_5];
+    [nr,nc] = size(motor);
+    pcolor([motor nan(nr,1); nan(1,nc+1)]);
+    colorbar
+    yticks(1.5:.5:23.5)
+    yticklabels({1:.5:23})
     xticks([1 2 3 4 5])
     set(gca,'FontSize', 13)
-    title('FM scores over time')
+    title('Fugl-Meyer scores over sessions')
     xlabel('Session')
+    ylabel('Subjects')
+    set(gca,'FontSize', 20)
+    colormap parula
     colorbar
+    legend('no data')
+
+    
     saveas(gcf, strcat(results_dir, 'figures/FM_overtime.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png')
 
     fm12=(fm_2-fm_1);
     fm23=(fm_3-fm_2);
@@ -399,8 +451,8 @@ for i=1:4
     [rho,p]=partialcorr([allsum,allrecover,sex_all,age_all,lesion_all], 'rows', 'complete', 'Type', 'Spearman');
 
     %% 
-    figure('Position', [0 0 1000 1000])
-    tiledlayout(2,2)
+    figure('Position', [0 0 500 500])
+    tiledlayout(2,2, 'padding', 'none')
     nexttile;
     scatter(sum12, fm12,'ko', 'filled')
     [rho,p]=corr(sum12,fm12, 'rows', 'complete', 'Type', 'Pearson');
@@ -414,7 +466,7 @@ for i=1:4
     title({'FM2-FM1 vs','# remaps S1-S2'})
     xlabel('Sum of remaps')
     ylabel('\Delta FM score')
-    text(2, -20, {['Rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
+    text(2, -20, {['rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
     ylim([-40 80])
     xlim([0 150])
     set(gca,'FontSize', 15)
@@ -432,7 +484,7 @@ for i=1:4
     title({'FM3-FM2 vs','# remaps S2-S3'})
     xlabel('Sum of remaps')
     ylabel('\Delta FM score')
-    text(2, -20, {['Rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
+    text(2, -20, {['rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
     ylim([-40 80])
     xlim([0 150])
     set(gca,'FontSize', 15)
@@ -450,7 +502,7 @@ for i=1:4
     title({'FM4-FM3 vs','# remaps S3-S4'})
     xlabel('Sum of remaps')
     ylabel('\Delta FM score')
-    text(2, -20, {['Rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
+    text(2, -20, {['rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
     ylim([-40 80])
     xlim([0 150])
     set(gca,'FontSize', 15)
@@ -468,13 +520,15 @@ for i=1:4
     title({'FM5-FM4 vs','# remaps S4-S5'})
     xlabel('Sum of remaps')
     ylabel('\Delta FM score')
-    text(2, -20, {['Rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
+    text(2, -20, {['rho: ', num2str(round(rho,3))], ['p: ', num2str(round(p,3))]}, 'FontSize', 15)
     ylim([-40 80])
     xlim([0 150])
     set(gca,'FontSize', 15)
     
-    sgtitle('Session-specific change in Fugl-Meyer scores vs. sum of remaps')
+   % sgtitle('Session-specific change in Fugl-Meyer scores vs. sum of remaps')
     saveas(gcf, strcat(results_dir, 'figures/remaps_recovery_sessionspecific.png'))
+    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/remaps_recovery_sessionspecific.png')
+
     close all;
     %% 
     save(strcat(results_dir, 'results.mat'), 'results')
