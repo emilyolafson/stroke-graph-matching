@@ -1,0 +1,703 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  1 MAR 2021 14:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**supplementary.tex
+(./supplementary.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count175
+\Gm@cntv=\count176
+\c@Gm@tempcnt=\count177
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks16
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/03/22 3.42 The Babel package
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count178
+\U@D=\dimen143
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count179
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen144
+\captionmargin@=\dimen145
+\captionwidth=\dimen146
+\caption@tempdima=\dimen147
+\caption@indent=\dimen148
+\caption@parindent=\dimen149
+\caption@hangindent=\dimen150
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count180
+\c@continuedfloat=\count181
+)
+\c@subfigure=\count182
+\c@subtable=\count183
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count184
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count185
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count186
+\c@listtotal=\count187
+\c@listcount=\count188
+\c@liststart=\count189
+\c@liststop=\count190
+\c@citecount=\count191
+\c@citetotal=\count192
+\c@multicitecount=\count193
+\c@multicitetotal=\count194
+\c@instcount=\count195
+\c@maxnames=\count196
+\c@minnames=\count197
+\c@maxitems=\count198
+\c@minitems=\count199
+\c@citecounter=\count266
+\c@maxcitecounter=\count267
+\c@savedcitecounter=\count268
+\c@uniquelist=\count269
+\c@uniquename=\count270
+\c@refsection=\count271
+\c@refsegment=\count272
+\c@maxextratitle=\count273
+\c@maxextratitleyear=\count274
+\c@maxextraname=\count275
+\c@maxextradate=\count276
+\c@maxextraalpha=\count277
+\c@abbrvpenalty=\count278
+\c@highnamepenalty=\count279
+\c@lownamepenalty=\count280
+\c@maxparens=\count281
+\c@parenlevel=\count282
+\blx@tempcnta=\count283
+\blx@tempcntb=\count284
+\blx@tempcntc=\count285
+\blx@maxsection=\count286
+\blx@maxsegment@0=\count287
+\blx@notetype=\count288
+\blx@parenlevel@text=\count289
+\blx@parenlevel@foot=\count290
+\blx@sectionciteorder@0=\count291
+\blx@entrysetcounter=\count292
+\labelnumberwidth=\skip49
+\labelalphawidth=\skip50
+\biblabelsep=\skip51
+\bibitemsep=\skip52
+\bibnamesep=\skip53
+\bibinitsep=\skip54
+\bibparsep=\skip55
+\bibhang=\skip56
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language86
+\c@mincomprange=\count293
+\c@maxcomprange=\count294
+\c@mincompwidth=\count295
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count296
+\c@savedafterword=\count297
+\c@annotator=\count298
+\c@savedannotator=\count299
+\c@author=\count300
+\c@savedauthor=\count301
+\c@bookauthor=\count302
+\c@savedbookauthor=\count303
+\c@commentator=\count304
+\c@savedcommentator=\count305
+\c@editor=\count306
+\c@savededitor=\count307
+\c@editora=\count308
+\c@savededitora=\count309
+\c@editorb=\count310
+\c@savededitorb=\count311
+\c@editorc=\count312
+\c@savededitorc=\count313
+\c@foreword=\count314
+\c@savedforeword=\count315
+\c@holder=\count316
+\c@savedholder=\count317
+\c@introduction=\count318
+\c@savedintroduction=\count319
+\c@namea=\count320
+\c@savednamea=\count321
+\c@nameb=\count322
+\c@savednameb=\count323
+\c@namec=\count324
+\c@savednamec=\count325
+\c@translator=\count326
+\c@savedtranslator=\count327
+\c@shortauthor=\count328
+\c@savedshortauthor=\count329
+\c@shorteditor=\count330
+\c@savedshorteditor=\count331
+\c@labelname=\count332
+\c@savedlabelname=\count333
+\c@institution=\count334
+\c@savedinstitution=\count335
+\c@lista=\count336
+\c@savedlista=\count337
+\c@listb=\count338
+\c@savedlistb=\count339
+\c@listc=\count340
+\c@savedlistc=\count341
+\c@listd=\count342
+\c@savedlistd=\count343
+\c@liste=\count344
+\c@savedliste=\count345
+\c@listf=\count346
+\c@savedlistf=\count347
+\c@location=\count348
+\c@savedlocation=\count349
+\c@organization=\count350
+\c@savedorganization=\count351
+\c@origlocation=\count352
+\c@savedoriglocation=\count353
+\c@origpublisher=\count354
+\c@savedorigpublisher=\count355
+\c@publisher=\count356
+\c@savedpublisher=\count357
+\c@language=\count358
+\c@savedlanguage=\count359
+\c@origlanguage=\count360
+\c@savedoriglanguage=\count361
+\c@pageref=\count362
+\c@savedpageref=\count363
+\shorthandwidth=\skip57
+\shortjournalwidth=\skip58
+\shortserieswidth=\skip59
+\shorttitlewidth=\skip60
+\shortauthorwidth=\skip61
+\shorteditorwidth=\skip62
+\locallabelnumberwidth=\skip63
+\locallabelalphawidth=\skip64
+\localshorthandwidth=\skip65
+\localshortjournalwidth=\skip66
+\localshortserieswidth=\skip67
+\localshorttitlewidth=\skip68
+\localshortauthorwidth=\skip69
+\localshorteditorwidth=\skip70
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+\c@textcitecount=\count364
+\c@textcitetotal=\count365
+\c@textcitemaxnames=\count366
+\c@biburlbigbreakpenalty=\count367
+\c@biburlbreakpenalty=\count368
+\c@biburlnumpenalty=\count369
+\c@biburlucpenalty=\count370
+\c@biburllcpenalty=\count371
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count372
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count373
+\c@bbx:relatedtotal=\count374
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read4
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count375
+\lst@gtempboxa=\box45
+\lst@token=\toks22
+\lst@length=\count376
+\lst@currlwidth=\dimen153
+\lst@column=\count377
+\lst@pos=\count378
+\lst@lostspace=\dimen154
+\lst@width=\dimen155
+\lst@newlines=\count379
+\lst@lineno=\count380
+\lst@maxwidth=\dimen156
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count381
+\lst@skipnumbers=\count382
+\lst@framebox=\box46
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count383
+\@quotereset=\count384
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count385
+\l__pdf_internal_box=\box47
+)
+(./supplementary.aux)
+\openout1 = `supplementary.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(50.58878pt, 496.33032pt, 50.58878pt)
+* v-part:(T,H,B)=(50.58878pt, 743.8693pt, 50.58878pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=496.33032pt
+* \textheight=743.8693pt
+* \oddsidemargin=-21.68121pt
+* \evensidemargin=-21.68121pt
+* \topmargin=-33.68121pt
+* \headheight=12.0pt
+* \headsep=1.0pt
+* \topskip=10.0pt
+* \footskip=18.06749pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count386
+\scratchdimen=\dimen157
+\scratchbox=\box48
+\nofMPsegments=\count387
+\nofMParguments=\count388
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count389
+\MPscratchDim=\dimen158
+\MPnumerator=\count390
+\makeMPintoPDFobject=\count391
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' specified.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout3 = `supplementary-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'supplementary.bbl' found.
+
+(./supplementary.bbl)
+Package biblatex Info: Reference section=0 on input line 35.
+Package biblatex Info: Reference segment=0 on input line 35.
+\c@lstlisting=\count392
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullFCs.pn
+g, id=1, 512.03294pt x 388.45125pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullF
+Cs.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullFC
+s.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/precision_fullFCs.png  used on input line 41.
+(pdftex.def)             Requested size: 446.69426pt x 338.88043pt.
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chaco.pd
+f, id=3, 1156.32pt x 1686.3pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_cha
+co.pdf Graphic file (type pdf)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chac
+o.pdf>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/allsubjects_chaco.pdf  used on input line 47.
+(pdftex.def)             Requested size: 446.69426pt x 651.4275pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncount.png, id=
+4, 750.805pt x 284.06125pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncount.png
+ Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncount.png>
+
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/lesioncount.png  used on input line 53.
+(pdftex.def)             Requested size: 446.69426pt x 169.00769pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png, id=5, 6
+02.25pt x 558.888pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png Gra
+phic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/costmat.png  used on input line 59.
+(pdftex.def)             Requested size: 446.69426pt x 414.55135pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png, id=
+6, 702.4644pt x 702.4644pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png
+ Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png>
+
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/FM_overtime.png  used on input line 65.
+(pdftex.def)             Requested size: 446.69426pt x 446.70306pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/proportion_overlap_w
+_lesion.png, id=7, 1611.01875pt x 1259.70625pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/proportion_over
+lap_w_lesion.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/proportion_overl
+ap_w_lesion.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/proportion_overlap_w_lesion.png  used on input line 71.
+(pdftex.def)             Requested size: 446.69426pt x 349.27469pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remapss1s2
+.png, id=8, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remap
+ss1s2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remaps
+s1s2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/lesionvol_remapss1s2.png  used on input line 78.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_remapss1s
+2.png, id=9, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_rema
+pss1s2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_remap
+ss1s2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/lesionload_remapss1s2.png  used on input line 84.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 77--90
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/diff_remaps_diff_FD.
+png, id=10, 1232.605pt x 984.67876pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/diff_remaps_dif
+f_FD.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/diff_remaps_diff
+_FD.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/diff_remaps_diff_FD.png  used on input line 93.
+(pdftex.def)             Requested size: 446.69426pt x 356.843pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1
+
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
+emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullFCs.png>]
+[2 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chaco
+.pdf>] [3 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncoun
+t.png> </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png (
+PNG copy)>] [4 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_ov
+ertime.png (PNG copy)>] [5 </Users/emilyolafson/GIT/stroke-graph-matching/apape
+r/figs/proportion_overlap_w_lesion.png (PNG copy)> </Users/emilyolafson/GIT/str
+oke-graph-matching/apaper/figs/lesionvol_remapss1s2.png (PNG copy)> </Users/emi
+lyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_remapss1s2.png (PNG 
+copy)>] [6 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/diff_rema
+ps_diff_FD.png (PNG copy)>] (./supplementary.aux)
+Package logreq Info: Writing requests to 'supplementary.run.xml'.
+\openout1 = `supplementary.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 12300 strings out of 480608
+ 218786 string characters out of 5903631
+ 672670 words of memory out of 5000000
+ 28063 multiletter control sequences out of 15000+600000
+ 537744 words of font info for 46 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 48i,7n,46p,831b,1600s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on supplementary.pdf (6 pages, 21729645 bytes).
+PDF statistics:
+ 61 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+

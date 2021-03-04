@@ -1650,6 +1650,136 @@
     \field{year}{2019}
   \endentry
 
+  \entry{Shen2013-zn}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SX}{%
+         family={Shen},
+         familyi={S\bibinitperiod},
+         given={X},
+         giveni={X},
+      }}%
+      {{hash=TF}{%
+         family={Tokoglu},
+         familyi={T\bibinitperiod},
+         given={F},
+         giveni={F},
+      }}%
+      {{hash=PX}{%
+         family={Papademetris},
+         familyi={P\bibinitperiod},
+         given={X},
+         giveni={X},
+      }}%
+      {{hash=CRT}{%
+         family={Constable},
+         familyi={C\bibinitperiod},
+         given={R\bibnamedelima T},
+         giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \keyw{Functional MRI; Graph-theory-based parcellation; Network analysis;
+  Resting-state connectivity; Whole-brain atlas}
+    \strng{namehash}{SX+1}
+    \strng{fullhash}{SXTFPXCRT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In this paper, we present a groupwise graph-theory-based parcellation
+  approach to define nodes for network analysis. The application of
+  network-theory-based analysis to extend the utility of functional MRI has
+  recently received increased attention. Such analyses require first and
+  foremost a reasonable definition of a set of nodes as input to the network
+  analysis. To date many applications have used existing atlases based on
+  cytoarchitecture, task-based fMRI activations, or anatomic delineations. A
+  potential pitfall in using such atlases is that the mean timecourse of a node
+  may not represent any of the constituent timecourses if different functional
+  areas are included within a single node. The proposed approach involves a
+  groupwise optimization that ensures functional homogeneity within each
+  subunit and that these definitions are consistent at the group level.
+  Parcellation reproducibility of each subunit is computed across multiple
+  groups of healthy volunteers and is demonstrated to be high. Issues related
+  to the selection of appropriate number of nodes in the brain are considered.
+  Within typical parameters of fMRI resolution, parcellation results are shown
+  for a total of 100, 200, and 300 subunits. Such parcellations may ultimately
+  serve as a functional atlas for fMRI and as such three atlases at the 100-,
+  200- and 300-parcellation levels derived from 79 healthy normal volunteers
+  are made freely available online along with tools to interface this atlas
+  with SPM, BioImage Suite and other analysis packages.%
+    }
+    \field{pages}{403\bibrangedash 415}
+    \field{title}{Groupwise whole-brain parcellation from resting-state {fMRI}
+  data for network node identification}
+    \field{volume}{82}
+    \field{journaltitle}{Neuroimage}
+    \field{month}{11}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Wodeyar2020-kz}{article}{}
+    \name{author}{4}{}{%
+      {{hash=WA}{%
+         family={Wodeyar},
+         familyi={W\bibinitperiod},
+         given={Anirudh},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CJM}{%
+         family={Cassidy},
+         familyi={C\bibinitperiod},
+         given={Jessica\bibnamedelima M},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=CSC}{%
+         family={Cramer},
+         familyi={C\bibinitperiod},
+         given={Steven\bibnamedelima C},
+         giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Srinivasan},
+         familyi={S\bibinitperiod},
+         given={Ramesh},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MIT Press}%
+    }
+    \strng{namehash}{WA+1}
+    \strng{fullhash}{WACJMCSCSR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The relationship between structural and functional connectivity has been
+  mostly examined in intact brains. Fewer studies have examined how differences
+  in structure as a result of injury alters function. In this study we analyzed
+  the relationship of structure to function across patients with stroke among
+  whom infarcts caused heterogenous structural damage. We estimated
+  relationships between distinct brain regions of interest (ROIs) from
+  functional MRI in two pipelines. In one analysis pipeline, we measured
+  functional connectivity by using correlation and partial correlation between
+  114 cortical ROIs. We found fMRI-BOLD partial correlation was altered at more
+  edges as a function of the structural connectome (SC) damage, relative to the
+  correlation. In a second analysis pipeline, we limited our analysis to fMRI
+  correlations between pairs of voxels for which we possess SC information. We
+  found that voxel-level functional connectivity showed the effect of
+  structural damage that we could not see when examining correlations between
+  ROIs. Further, the effects of structural damage on functional connectivity
+  are consistent with a model of functional connectivity, diffusion, which
+  expects functional connectivity to result from activity spreading over
+  multiple edge anatomical paths.%
+    }
+    \field{pages}{1\bibrangedash 22}
+    \field{title}{Damage to the structural connectome reflected in
+  resting-state {fMRI} functional connectivity}
+    \field{journaltitle}{Network Neuroscience}
+    \field{month}{07}
+    \field{year}{2020}
+  \endentry
+
   \entry{Liegeois2020-ua}{article}{}
     \name{author}{5}{}{%
       {{hash=LR}{%
@@ -1715,221 +1845,6 @@
   relationship with structural connectivity}
     \field{journaltitle}{Network Neuroscience}
     \field{month}{08}
-    \field{year}{2020}
-  \endentry
-
-  \entry{Finn2015-er}{article}{}
-    \name{author}{8}{}{%
-      {{hash=FES}{%
-         family={Finn},
-         familyi={F\bibinitperiod},
-         given={Emily\bibnamedelima S},
-         giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=SX}{%
-         family={Shen},
-         familyi={S\bibinitperiod},
-         given={Xilin},
-         giveni={X\bibinitperiod},
-      }}%
-      {{hash=SD}{%
-         family={Scheinost},
-         familyi={S\bibinitperiod},
-         given={Dustin},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=RMD}{%
-         family={Rosenberg},
-         familyi={R\bibinitperiod},
-         given={Monica\bibnamedelima D},
-         giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-      {{hash=HJ}{%
-         family={Huang},
-         familyi={H\bibinitperiod},
-         given={Jessica},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=CMM}{%
-         family={Chun},
-         familyi={C\bibinitperiod},
-         given={Marvin\bibnamedelima M},
-         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=PX}{%
-         family={Papademetris},
-         familyi={P\bibinitperiod},
-         given={Xenophon},
-         giveni={X\bibinitperiod},
-      }}%
-      {{hash=CRT}{%
-         family={Constable},
-         familyi={C\bibinitperiod},
-         given={R\bibnamedelima Todd},
-         giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
-      }}%
-    }
-    \list{language}{1}{%
-      {en}%
-    }
-    \strng{namehash}{FES+1}
-    \strng{fullhash}{FESSXSDRMDHJCMMPXCRT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    Functional magnetic resonance imaging (fMRI) studies typically collapse
-  data from many subjects, but brain functional organization varies between
-  individuals. Here we establish that this individual variability is both
-  robust and reliable, using data from the Human Connectome Project to
-  demonstrate that functional connectivity profiles act as a 'fingerprint' that
-  can accurately identify subjects from a large group. Identification was
-  successful across scan sessions and even between task and rest conditions,
-  indicating that an individual's connectivity profile is intrinsic, and can be
-  used to distinguish that individual regardless of how the brain is engaged
-  during imaging. Characteristic connectivity patterns were distributed
-  throughout the brain, but the frontoparietal network emerged as most
-  distinctive. Furthermore, we show that connectivity profiles predict levels
-  of fluid intelligence: the same networks that were most discriminating of
-  individuals were also most predictive of cognitive behavior. Results indicate
-  the potential to draw inferences about single subjects on the basis of
-  functional connectivity fMRI.%
-    }
-    \field{number}{11}
-    \field{pages}{1664\bibrangedash 1671}
-    \field{title}{Functional connectome fingerprinting: identifying individuals
-  using patterns of brain connectivity}
-    \field{volume}{18}
-    \field{journaltitle}{Nat. Neurosci.}
-    \field{month}{11}
-    \field{year}{2015}
-  \endentry
-
-  \entry{Kuceyeski2013-nk}{article}{}
-    \name{author}{4}{}{%
-      {{hash=KA}{%
-         family={Kuceyeski},
-         familyi={K\bibinitperiod},
-         given={Amy},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=MJ}{%
-         family={Maruta},
-         familyi={M\bibinitperiod},
-         given={Jun},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=RN}{%
-         family={Relkin},
-         familyi={R\bibinitperiod},
-         given={Norman},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=RA}{%
-         family={Raj},
-         familyi={R\bibinitperiod},
-         given={Ashish},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{language}{1}{%
-      {en}%
-    }
-    \strng{namehash}{KA+1}
-    \strng{fullhash}{KAMJRNRA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    Accurate prediction of brain dysfunction caused by disease or injury
-  requires the quantification of resultant neural connectivity changes compared
-  with the normal state. There are many methods with which to assess anatomical
-  changes in structural or diffusion magnetic resonance imaging, but most
-  overlook the topology of white matter (WM) connections that make up the
-  healthy brain network. Here, a new neuroimaging software pipeline called the
-  Network Modification (NeMo) Tool is presented that associates alterations in
-  WM integrity with expected changes in neural connectivity between gray matter
-  regions. The NeMo Tool uses a large reference set of healthy tractograms to
-  assess implied network changes arising from a particular pattern of WM
-  alteration on a region- and network-wise level. In this way, WM integrity
-  changes can be extrapolated to the cortices and deep brain nuclei, enabling
-  assessment of functional and cognitive alterations. Unlike current techniques
-  that assess network dysfunction, the NeMo tool does not require tractography
-  in pathological brains for which the algorithms may be unreliable or
-  diffusion data are unavailable. The versatility of the NeMo Tool is
-  demonstrated by applying it to data from patients with Alzheimer's disease,
-  fronto-temporal dementia, normal pressure hydrocephalus, and mild traumatic
-  brain injury. This tool fills a gap in the quantitative neuroimaging field by
-  enabling an investigation of morphological and functional implications of
-  changes in structural WM integrity.%
-    }
-    \field{number}{5}
-    \field{pages}{451\bibrangedash 463}
-    \field{title}{The Network Modification ({NeMo}) Tool: elucidating the
-  effect of white matter integrity changes on cortical and subcortical
-  structural connectivity}
-    \field{volume}{3}
-    \field{journaltitle}{Brain Connect.}
-    \field{year}{2013}
-  \endentry
-
-  \entry{Wodeyar2020-kz}{article}{}
-    \name{author}{4}{}{%
-      {{hash=WA}{%
-         family={Wodeyar},
-         familyi={W\bibinitperiod},
-         given={Anirudh},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=CJM}{%
-         family={Cassidy},
-         familyi={C\bibinitperiod},
-         given={Jessica\bibnamedelima M},
-         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=CSC}{%
-         family={Cramer},
-         familyi={C\bibinitperiod},
-         given={Steven\bibnamedelima C},
-         giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-      {{hash=SR}{%
-         family={Srinivasan},
-         familyi={S\bibinitperiod},
-         given={Ramesh},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {MIT Press}%
-    }
-    \strng{namehash}{WA+1}
-    \strng{fullhash}{WACJMCSCSR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    The relationship between structural and functional connectivity has been
-  mostly examined in intact brains. Fewer studies have examined how differences
-  in structure as a result of injury alters function. In this study we analyzed
-  the relationship of structure to function across patients with stroke among
-  whom infarcts caused heterogenous structural damage. We estimated
-  relationships between distinct brain regions of interest (ROIs) from
-  functional MRI in two pipelines. In one analysis pipeline, we measured
-  functional connectivity by using correlation and partial correlation between
-  114 cortical ROIs. We found fMRI-BOLD partial correlation was altered at more
-  edges as a function of the structural connectome (SC) damage, relative to the
-  correlation. In a second analysis pipeline, we limited our analysis to fMRI
-  correlations between pairs of voxels for which we possess SC information. We
-  found that voxel-level functional connectivity showed the effect of
-  structural damage that we could not see when examining correlations between
-  ROIs. Further, the effects of structural damage on functional connectivity
-  are consistent with a model of functional connectivity, diffusion, which
-  expects functional connectivity to result from activity spreading over
-  multiple edge anatomical paths.%
-    }
-    \field{pages}{1\bibrangedash 22}
-    \field{title}{Damage to the structural connectome reflected in
-  resting-state {fMRI} functional connectivity}
-    \field{journaltitle}{Network Neuroscience}
-    \field{month}{07}
     \field{year}{2020}
   \endentry
 
@@ -2160,6 +2075,159 @@
     \field{volume}{85}
     \field{journaltitle}{Neuron}
     \field{month}{03}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Kuceyeski2013-nk}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KA}{%
+         family={Kuceyeski},
+         familyi={K\bibinitperiod},
+         given={Amy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Maruta},
+         familyi={M\bibinitperiod},
+         given={Jun},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RN}{%
+         family={Relkin},
+         familyi={R\bibinitperiod},
+         given={Norman},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Raj},
+         familyi={R\bibinitperiod},
+         given={Ashish},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{KA+1}
+    \strng{fullhash}{KAMJRNRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Accurate prediction of brain dysfunction caused by disease or injury
+  requires the quantification of resultant neural connectivity changes compared
+  with the normal state. There are many methods with which to assess anatomical
+  changes in structural or diffusion magnetic resonance imaging, but most
+  overlook the topology of white matter (WM) connections that make up the
+  healthy brain network. Here, a new neuroimaging software pipeline called the
+  Network Modification (NeMo) Tool is presented that associates alterations in
+  WM integrity with expected changes in neural connectivity between gray matter
+  regions. The NeMo Tool uses a large reference set of healthy tractograms to
+  assess implied network changes arising from a particular pattern of WM
+  alteration on a region- and network-wise level. In this way, WM integrity
+  changes can be extrapolated to the cortices and deep brain nuclei, enabling
+  assessment of functional and cognitive alterations. Unlike current techniques
+  that assess network dysfunction, the NeMo tool does not require tractography
+  in pathological brains for which the algorithms may be unreliable or
+  diffusion data are unavailable. The versatility of the NeMo Tool is
+  demonstrated by applying it to data from patients with Alzheimer's disease,
+  fronto-temporal dementia, normal pressure hydrocephalus, and mild traumatic
+  brain injury. This tool fills a gap in the quantitative neuroimaging field by
+  enabling an investigation of morphological and functional implications of
+  changes in structural WM integrity.%
+    }
+    \field{number}{5}
+    \field{pages}{451\bibrangedash 463}
+    \field{title}{The Network Modification ({NeMo}) Tool: elucidating the
+  effect of white matter integrity changes on cortical and subcortical
+  structural connectivity}
+    \field{volume}{3}
+    \field{journaltitle}{Brain Connect.}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Finn2015-er}{article}{}
+    \name{author}{8}{}{%
+      {{hash=FES}{%
+         family={Finn},
+         familyi={F\bibinitperiod},
+         given={Emily\bibnamedelima S},
+         giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SX}{%
+         family={Shen},
+         familyi={S\bibinitperiod},
+         given={Xilin},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Scheinost},
+         familyi={S\bibinitperiod},
+         given={Dustin},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RMD}{%
+         family={Rosenberg},
+         familyi={R\bibinitperiod},
+         given={Monica\bibnamedelima D},
+         giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Jessica},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CMM}{%
+         family={Chun},
+         familyi={C\bibinitperiod},
+         given={Marvin\bibnamedelima M},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=PX}{%
+         family={Papademetris},
+         familyi={P\bibinitperiod},
+         given={Xenophon},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=CRT}{%
+         family={Constable},
+         familyi={C\bibinitperiod},
+         given={R\bibnamedelima Todd},
+         giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{FES+1}
+    \strng{fullhash}{FESSXSDRMDHJCMMPXCRT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Functional magnetic resonance imaging (fMRI) studies typically collapse
+  data from many subjects, but brain functional organization varies between
+  individuals. Here we establish that this individual variability is both
+  robust and reliable, using data from the Human Connectome Project to
+  demonstrate that functional connectivity profiles act as a 'fingerprint' that
+  can accurately identify subjects from a large group. Identification was
+  successful across scan sessions and even between task and rest conditions,
+  indicating that an individual's connectivity profile is intrinsic, and can be
+  used to distinguish that individual regardless of how the brain is engaged
+  during imaging. Characteristic connectivity patterns were distributed
+  throughout the brain, but the frontoparietal network emerged as most
+  distinctive. Furthermore, we show that connectivity profiles predict levels
+  of fluid intelligence: the same networks that were most discriminating of
+  individuals were also most predictive of cognitive behavior. Results indicate
+  the potential to draw inferences about single subjects on the basis of
+  functional connectivity fMRI.%
+    }
+    \field{number}{11}
+    \field{pages}{1664\bibrangedash 1671}
+    \field{title}{Functional connectome fingerprinting: identifying individuals
+  using patterns of brain connectivity}
+    \field{volume}{18}
+    \field{journaltitle}{Nat. Neurosci.}
+    \field{month}{11}
     \field{year}{2015}
   \endentry
 \enddatalist

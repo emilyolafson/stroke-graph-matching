@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  28 FEB 2021 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  4 MAR 2021 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -115,6 +115,14 @@ Package caption Info: Standard document class detected.
 \c@subfigure=\count182
 \c@subtable=\count183
 )
+(/usr/local/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen151
+\WF@size=\dimen152
+\c@WF@wrappedlines=\count184
+\WF@box=\box45
+\WF@everypar=\toks19
+Package: wrapfig 2003/01/31  v 3.6
+)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -132,8 +140,8 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen151
-\Gin@req@width=\dimen152
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
@@ -154,7 +162,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count184
+\etb@tempcnta=\count185
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
@@ -164,7 +172,7 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count185
+\lrq@indent=\count186
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -176,47 +184,47 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count186
-\c@listtotal=\count187
-\c@listcount=\count188
-\c@liststart=\count189
-\c@liststop=\count190
-\c@citecount=\count191
-\c@citetotal=\count192
-\c@multicitecount=\count193
-\c@multicitetotal=\count194
-\c@instcount=\count195
-\c@maxnames=\count196
-\c@minnames=\count197
-\c@maxitems=\count198
-\c@minitems=\count199
-\c@citecounter=\count266
-\c@maxcitecounter=\count267
-\c@savedcitecounter=\count268
-\c@uniquelist=\count269
-\c@uniquename=\count270
-\c@refsection=\count271
-\c@refsegment=\count272
-\c@maxextratitle=\count273
-\c@maxextratitleyear=\count274
-\c@maxextraname=\count275
-\c@maxextradate=\count276
-\c@maxextraalpha=\count277
-\c@abbrvpenalty=\count278
-\c@highnamepenalty=\count279
-\c@lownamepenalty=\count280
-\c@maxparens=\count281
-\c@parenlevel=\count282
-\blx@tempcnta=\count283
-\blx@tempcntb=\count284
-\blx@tempcntc=\count285
-\blx@maxsection=\count286
-\blx@maxsegment@0=\count287
-\blx@notetype=\count288
-\blx@parenlevel@text=\count289
-\blx@parenlevel@foot=\count290
-\blx@sectionciteorder@0=\count291
-\blx@entrysetcounter=\count292
+\c@tabx@nest=\count187
+\c@listtotal=\count188
+\c@listcount=\count189
+\c@liststart=\count190
+\c@liststop=\count191
+\c@citecount=\count192
+\c@citetotal=\count193
+\c@multicitecount=\count194
+\c@multicitetotal=\count195
+\c@instcount=\count196
+\c@maxnames=\count197
+\c@minnames=\count198
+\c@maxitems=\count199
+\c@minitems=\count266
+\c@citecounter=\count267
+\c@maxcitecounter=\count268
+\c@savedcitecounter=\count269
+\c@uniquelist=\count270
+\c@uniquename=\count271
+\c@refsection=\count272
+\c@refsegment=\count273
+\c@maxextratitle=\count274
+\c@maxextratitleyear=\count275
+\c@maxextraname=\count276
+\c@maxextradate=\count277
+\c@maxextraalpha=\count278
+\c@abbrvpenalty=\count279
+\c@highnamepenalty=\count280
+\c@lownamepenalty=\count281
+\c@maxparens=\count282
+\c@parenlevel=\count283
+\blx@tempcnta=\count284
+\blx@tempcntb=\count285
+\blx@tempcntc=\count286
+\blx@maxsection=\count287
+\blx@maxsegment@0=\count288
+\blx@notetype=\count289
+\blx@parenlevel@text=\count290
+\blx@parenlevel@foot=\count291
+\blx@sectionciteorder@0=\count292
+\blx@entrysetcounter=\count293
 \labelnumberwidth=\skip49
 \labelalphawidth=\skip50
 \biblabelsep=\skip51
@@ -228,9 +236,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language86
-\c@mincomprange=\count293
-\c@maxcomprange=\count294
-\c@mincompwidth=\count295
+\c@mincomprange=\count294
+\c@maxcomprange=\count295
+\c@mincompwidth=\count296
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -241,74 +249,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count296
-\c@savedafterword=\count297
-\c@annotator=\count298
-\c@savedannotator=\count299
-\c@author=\count300
-\c@savedauthor=\count301
-\c@bookauthor=\count302
-\c@savedbookauthor=\count303
-\c@commentator=\count304
-\c@savedcommentator=\count305
-\c@editor=\count306
-\c@savededitor=\count307
-\c@editora=\count308
-\c@savededitora=\count309
-\c@editorb=\count310
-\c@savededitorb=\count311
-\c@editorc=\count312
-\c@savededitorc=\count313
-\c@foreword=\count314
-\c@savedforeword=\count315
-\c@holder=\count316
-\c@savedholder=\count317
-\c@introduction=\count318
-\c@savedintroduction=\count319
-\c@namea=\count320
-\c@savednamea=\count321
-\c@nameb=\count322
-\c@savednameb=\count323
-\c@namec=\count324
-\c@savednamec=\count325
-\c@translator=\count326
-\c@savedtranslator=\count327
-\c@shortauthor=\count328
-\c@savedshortauthor=\count329
-\c@shorteditor=\count330
-\c@savedshorteditor=\count331
-\c@labelname=\count332
-\c@savedlabelname=\count333
-\c@institution=\count334
-\c@savedinstitution=\count335
-\c@lista=\count336
-\c@savedlista=\count337
-\c@listb=\count338
-\c@savedlistb=\count339
-\c@listc=\count340
-\c@savedlistc=\count341
-\c@listd=\count342
-\c@savedlistd=\count343
-\c@liste=\count344
-\c@savedliste=\count345
-\c@listf=\count346
-\c@savedlistf=\count347
-\c@location=\count348
-\c@savedlocation=\count349
-\c@organization=\count350
-\c@savedorganization=\count351
-\c@origlocation=\count352
-\c@savedoriglocation=\count353
-\c@origpublisher=\count354
-\c@savedorigpublisher=\count355
-\c@publisher=\count356
-\c@savedpublisher=\count357
-\c@language=\count358
-\c@savedlanguage=\count359
-\c@origlanguage=\count360
-\c@savedoriglanguage=\count361
-\c@pageref=\count362
-\c@savedpageref=\count363
+\c@afterword=\count297
+\c@savedafterword=\count298
+\c@annotator=\count299
+\c@savedannotator=\count300
+\c@author=\count301
+\c@savedauthor=\count302
+\c@bookauthor=\count303
+\c@savedbookauthor=\count304
+\c@commentator=\count305
+\c@savedcommentator=\count306
+\c@editor=\count307
+\c@savededitor=\count308
+\c@editora=\count309
+\c@savededitora=\count310
+\c@editorb=\count311
+\c@savededitorb=\count312
+\c@editorc=\count313
+\c@savededitorc=\count314
+\c@foreword=\count315
+\c@savedforeword=\count316
+\c@holder=\count317
+\c@savedholder=\count318
+\c@introduction=\count319
+\c@savedintroduction=\count320
+\c@namea=\count321
+\c@savednamea=\count322
+\c@nameb=\count323
+\c@savednameb=\count324
+\c@namec=\count325
+\c@savednamec=\count326
+\c@translator=\count327
+\c@savedtranslator=\count328
+\c@shortauthor=\count329
+\c@savedshortauthor=\count330
+\c@shorteditor=\count331
+\c@savedshorteditor=\count332
+\c@labelname=\count333
+\c@savedlabelname=\count334
+\c@institution=\count335
+\c@savedinstitution=\count336
+\c@lista=\count337
+\c@savedlista=\count338
+\c@listb=\count339
+\c@savedlistb=\count340
+\c@listc=\count341
+\c@savedlistc=\count342
+\c@listd=\count343
+\c@savedlistd=\count344
+\c@liste=\count345
+\c@savedliste=\count346
+\c@listf=\count347
+\c@savedlistf=\count348
+\c@location=\count349
+\c@savedlocation=\count350
+\c@organization=\count351
+\c@savedorganization=\count352
+\c@origlocation=\count353
+\c@savedoriglocation=\count354
+\c@origpublisher=\count355
+\c@savedorigpublisher=\count356
+\c@publisher=\count357
+\c@savedpublisher=\count358
+\c@language=\count359
+\c@savedlanguage=\count360
+\c@origlanguage=\count361
+\c@savedoriglanguage=\count362
+\c@pageref=\count363
+\c@savedpageref=\count364
 \shorthandwidth=\skip57
 \shortjournalwidth=\skip58
 \shortserieswidth=\skip59
@@ -344,19 +352,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count364
-\c@textcitetotal=\count365
-\c@textcitemaxnames=\count366
-\c@biburlbigbreakpenalty=\count367
-\c@biburlbreakpenalty=\count368
-\c@biburlnumpenalty=\count369
-\c@biburlucpenalty=\count370
-\c@biburllcpenalty=\count371
+\c@textcitecount=\count365
+\c@textcitetotal=\count366
+\c@textcitemaxnames=\count367
+\c@biburlbigbreakpenalty=\count368
+\c@biburlbreakpenalty=\count369
+\c@biburlnumpenalty=\count370
+\c@biburlucpenalty=\count371
+\c@biburllcpenalty=\count372
 \biburlbigskip=\muskip17
 \biburlnumskip=\muskip18
 \biburlucskip=\muskip19
 \biburllcskip=\muskip20
-\c@smartand=\count372
+\c@smartand=\count373
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -368,8 +376,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count373
-\c@bbx:relatedtotal=\count374
+\c@bbx:relatedcount=\count374
+\c@bbx:relatedtotal=\count375
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -396,7 +404,7 @@ File: biblatex.cfg
 ))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks19
+\@emptytoks=\toks20
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -405,29 +413,29 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks20
-\verbatim@line=\toks21
+\every@verbatim=\toks21
+\verbatim@line=\toks22
 \verbatim@in@stream=\read4
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count375
-\lst@gtempboxa=\box45
-\lst@token=\toks22
-\lst@length=\count376
-\lst@currlwidth=\dimen153
-\lst@column=\count377
-\lst@pos=\count378
-\lst@lostspace=\dimen154
-\lst@width=\dimen155
-\lst@newlines=\count379
-\lst@lineno=\count380
-\lst@maxwidth=\dimen156
+\lst@mode=\count376
+\lst@gtempboxa=\box46
+\lst@token=\toks23
+\lst@length=\count377
+\lst@currlwidth=\dimen155
+\lst@column=\count378
+\lst@pos=\count379
+\lst@lostspace=\dimen156
+\lst@width=\dimen157
+\lst@newlines=\count380
+\lst@lineno=\count381
+\lst@maxwidth=\dimen158
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count381
-\lst@skipnumbers=\count382
-\lst@framebox=\box46
+\c@lstnumber=\count382
+\lst@skipnumbers=\count383
+\lst@framebox=\box47
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -441,46 +449,30 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count383
-\@quotereset=\count384
+\@quotelevel=\count384
+\@quotereset=\count385
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count385
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count386
+\l__pdf_internal_box=\box48
 )
-(./feb25_doc.aux
-
-LaTeX Warning: Label `fig:sub-second' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub-second' multiply defined.
-
-
-LaTeX Warning: Label `fig:sub-second' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub-second' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig' multiply defined.
-
-)
+(./feb25_doc.aux)
 \openout1 = `feb25_doc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -518,20 +510,21 @@ LaTeX Font Info:    ... okay on input line 35.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count386
-\scratchdimen=\dimen157
-\scratchbox=\box48
-\nofMPsegments=\count387
-\nofMParguments=\count388
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count389
-\MPscratchDim=\dimen158
-\MPnumerator=\count390
-\makeMPintoPDFobject=\count391
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count387
+\scratchdimen=\dimen159
+\scratchbox=\box49
+\nofMPsegments=\count388
+\nofMParguments=\count389
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count390
+\MPscratchDim=\dimen160
+\MPnumerator=\count391
+\makeMPintoPDFobject=\count392
+\everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -559,16 +552,16 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'feb25_doc.bbl' found.
 
 (./feb25_doc.bbl)
-Package biblatex Info: Reference section=0 on input line 35.
-Package biblatex Info: Reference segment=0 on input line 35.
-\c@lstlisting=\count392
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+Package biblatex Info: Reference section=0 on input line 37.
+Package biblatex Info: Reference segment=0 on input line 37.
+\c@lstlisting=\count393
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -578,239 +571,581 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Warning: No \author given.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
 
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/graphmatching_proced
-ure.png, id=15, 385.44pt x 361.35pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/graphmatching_p
-rocedure.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/graphmatching_pr
-ocedure.png>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/graphmatching_procedure.png  used on input line 80.
-(pdftex.def)             Requested size: 496.33032pt x 465.31087pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3] [4 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/graphmatching
-_procedure.png (PNG copy)>]
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gummi_remapfreq_alls
-essions.png, id=29, 318.9516pt x 324.7332pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gummi_remapfreq
-_allsessions.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gummi_remapfreq_
-allsessions.png>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/gummi_remapfreq_allsessions.png  used on input line 104.
-(pdftex.def)             Requested size: 248.16516pt x 252.6715pt.
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_chaco
-.png, id=30, 502.0356pt x 502.0356pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_
-chaco.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_c
-haco.png>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/corr_remapping_chaco.png  used on input line 111.
-(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 101--115
-[]$[]$ $[]$ 
- []
-
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineswaps_6month
-FM.png, id=31, 502.0356pt x 502.0356pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineswaps_6
-monthFM.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineswaps_6m
-onthFM.png>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/baselineswaps_6monthFM.png  used on input line 123.
-(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/remaps_recovery_sess
-ionspecific.png, id=32, 502.0356pt x 502.0356pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/remaps_recovery
-_sessionspecific.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/remaps_recovery_
-sessionspecific.png>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/remaps_recovery_sessionspecific.png  used on input line 130.
-(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 120--133
-[]$[]$ $[]$ 
- []
-
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullFCs.pn
-g, id=33, 512.03294pt x 388.45125pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullF
-Cs.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullFC
-s.png>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/precision_fullFCs.png  used on input line 152.
-(pdftex.def)             Requested size: 446.69426pt x 338.88043pt.
-[5 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gummi_remapfreq_a
-llsessions.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-matching/apape
-r/figs/corr_remapping_chaco.png (PNG copy)>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chaco.pd
-f, id=38, 1156.32pt x 1686.3pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_cha
-co.pdf Graphic file (type pdf)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chac
-o.pdf>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/allsubjects_chaco.pdf  used on input line 158.
-(pdftex.def)             Requested size: 446.69426pt x 651.4275pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncount.png, id=
-39, 750.805pt x 284.06125pt>
+10, 750.805pt x 284.06125pt>
 File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncount.png
  Graphic file (type png)
 <use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncount.png>
 
 Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/lesioncount.png  used on input line 164.
-(pdftex.def)             Requested size: 446.69426pt x 169.00769pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png, id=40, 
-602.25pt x 558.888pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png Gra
-phic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/costmat.png  used on input line 170.
-(pdftex.def)             Requested size: 446.69426pt x 414.55135pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+igs/lesioncount.png  used on input line 69.
+(pdftex.def)             Requested size: 297.80121pt x 112.67323pt.
 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png, id=
-41, 702.4644pt x 702.4644pt>
+12, 702.4644pt x 702.4644pt>
 File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png
  Graphic file (type png)
 <use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png>
 
 Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/FM_overtime.png  used on input line 176.
-(pdftex.def)             Requested size: 446.69426pt x 446.70306pt.
+igs/FM_overtime.png  used on input line 78.
+(pdftex.def)             Requested size: 297.80121pt x 297.80919pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/proportion_overlap_w
-_lesion.png, id=42, 1611.01875pt x 1259.70625pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/proportion_over
-lap_w_lesion.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/proportion_overl
-ap_w_lesion.png>
+[2 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncount.png>]
+[3 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png (
+PNG copy)>]
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gm_proc.png, id=24, 
+385.44pt x 361.35pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gm_proc.png Gra
+phic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gm_proc.png>
 Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/proportion_overlap_w_lesion.png  used on input line 182.
-(pdftex.def)             Requested size: 446.69426pt x 349.27469pt.
+igs/gm_proc.png  used on input line 99.
+(pdftex.def)             Requested size: 496.33032pt x 465.31087pt.
+ [4 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gm_proc.png (PNG
+ copy)>]
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gummi_remapfreq_alls
+essions.png, id=28, 318.9516pt x 324.7332pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gummi_remapfreq
+_allsessions.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gummi_remapfreq_
+allsessions.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/gummi_remapfreq_allsessions.png  used on input line 127.
+(pdftex.def)             Requested size: 248.16516pt x 252.6715pt.
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_chaco
+.png, id=29, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_
+chaco.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/corr_remapping_c
+haco.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/corr_remapping_chaco.png  used on input line 134.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 124--138
+[]$[]$ $[]$ 
+ []
+
+[5]
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineswaps_6month
+FM.png, id=38, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineswaps_6
+monthFM.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineswaps_6m
+onthFM.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/baselineswaps_6monthFM.png  used on input line 145.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/remaps_recovery_sess
+ionspecific.png, id=39, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/remaps_recovery
+_sessionspecific.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/remaps_recovery_
+sessionspecific.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/remaps_recovery_sessionspecific.png  used on input line 152.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 142--156
+[]$[]$ $[]$ 
+ []
+
+[6 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/gummi_remapfreq_a
+llsessions.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-matching/apape
+r/figs/corr_remapping_chaco.png (PNG copy)>] [7 </Users/emilyolafson/GIT/stroke
+-graph-matching/apaper/figs/baselineswaps_6monthFM.png (PNG copy)> </Users/emil
+yolafson/GIT/stroke-graph-matching/apaper/figs/remaps_recovery_sessionspecific.
+png (PNG copy)>]
+
+LaTeX Warning: Citation 'â€¢' on page 8 undefined on input line 193.
+
+Missing character: There is no â in font cmbx10!
+Missing character: There is no € in font cmbx10!
+Missing character: There is no ¢ in font cmbx10!
+
+LaTeX Warning: Citation 'Pritshcet' on page 8 undefined on input line 193.
+
+[8]
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullFCs.pn
+g, id=51, 512.03294pt x 388.45125pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullF
+Cs.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullFC
+s.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/precision_fullFCs.png  used on input line 200.
+(pdftex.def)             Requested size: 297.80121pt x 225.92424pt.
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/networks.png, id=52,
+ 576.1525pt x 296.10625pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/networks.png Gr
+aphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/networks.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/networks.png  used on input line 209.
+(pdftex.def)             Requested size: 397.06577pt x 204.07405pt.
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chaco.pd
+f, id=53, 1156.32pt x 1686.3pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_cha
+co.pdf Graphic file (type pdf)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chac
+o.pdf>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/allsubjects_chaco.pdf  used on input line 217.
+(pdftex.def)             Requested size: 446.69426pt x 651.4275pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_remapss1s
-2.png, id=43, 502.0356pt x 502.0356pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_rema
-pss1s2.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_remap
-ss1s2.png>
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/chaco_remap_noremap.
+png, id=54, 1608.0075pt x 1485.55pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/chaco_remap_nor
+emap.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/chaco_remap_nore
+map.png>
 Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/lesionload_remapss1s2.png  used on input line 188.
-(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
-</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remapss1s2
-.png, id=44, 502.0356pt x 502.0356pt>
-File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remap
-ss1s2.png Graphic file (type png)
-<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remaps
-s1s2.png>
-Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
-igs/lesionvol_remapss1s2.png  used on input line 193.
-(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+igs/chaco_remap_noremap.png  used on input line 224.
+(pdftex.def)             Requested size: 446.69426pt x 412.66435pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 187--198
-[]$[]$ $[]$
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/remapp
+ing_matrices_S1S2.png, id=55, 1003.5894pt x 903.375pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/r
+emapping_matrices_S1S2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/re
+mapping_matrices_S1S2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta0/figures/remapping_matrices_S1S2.png  used on input line 231.
+(pdftex.def)             Requested size: 263.05446pt x 236.788pt.
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/remapp
+ing_matrices_S2S3.png, id=56, 1003.5894pt x 903.375pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/r
+emapping_matrices_S2S3.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/re
+mapping_matrices_S2S3.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta0/figures/remapping_matrices_S2S3.png  used on input line 235.
+(pdftex.def)             Requested size: 263.05446pt x 236.788pt.
+
+Overfull \hbox (32.00081pt too wide) in paragraph at lines 230--238
+[]$[]$ $[]$ 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/remapp
+ing_matrices_S3S4.png, id=57, 1003.5894pt x 903.375pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/r
+emapping_matrices_S3S4.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/re
+mapping_matrices_S3S4.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta0/figures/remapping_matrices_S3S4.png  used on input line 242.
+(pdftex.def)             Requested size: 263.05446pt x 236.788pt.
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/remapp
+ing_matrices_S4S5.png, id=58, 1003.5894pt x 903.375pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/r
+emapping_matrices_S4S5.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/re
+mapping_matrices_S4S5.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta0/figures/remapping_matrices_S4S5.png  used on input line 246.
+(pdftex.def)             Requested size: 263.05446pt x 236.788pt.
+
+Overfull \hbox (32.00081pt too wide) in paragraph at lines 241--249
+[]$[]$ $[]$ 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/baselineswaps_6mo
-nthFM.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-matching/apaper/fig
-s/remaps_recovery_sessionspecific.png (PNG copy)>] [7 </Users/emilyolafson/GIT/
-stroke-graph-matching/apaper/figs/precision_fullFCs.png>] [8] [9 </Users/emilyo
-lafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chaco.pdf>] [10 </User
-s/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesioncount.png> </Users/e
-milyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png (PNG copy)>]
-[11 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png 
-(PNG copy)>] [12 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/pro
-portion_overlap_w_lesion.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-
-matching/apaper/figs/lesionload_remapss1s2.png (PNG copy)> </Users/emilyolafson
-/GIT/stroke-graph-matching/apaper/figs/lesionvol_remapss1s2.png (PNG copy)>]
-(./feb25_doc.aux)
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png, id=59, 
+602.25pt x 558.888pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png Gra
+phic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costmat.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/costmat.png  used on input line 254.
+(pdftex.def)             Requested size: 446.69426pt x 414.55135pt.
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/sum_remaps_yeo.png, 
+id=60, 604.1772pt x 460.6008pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/sum_remaps_yeo.
+png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/sum_remaps_yeo.p
+ng>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/sum_remaps_yeo.png  used on input line 260.
+(pdftex.def)             Requested size: 496.33032pt x 378.39088pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remapss1s2
+.png, id=61, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remap
+ss1s2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionvol_remaps
+s1s2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/lesionvol_remapss1s2.png  used on input line 268.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_remapss1s
+2.png, id=62, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_rema
+pss1s2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/lesionload_remap
+ss1s2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/lesionload_remapss1s2.png  used on input line 274.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 267--279
+[][] [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/diff_remaps_diff_FD.
+png, id=63, 1232.605pt x 984.67876pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/diff_remaps_dif
+f_FD.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/diff_remaps_diff
+_FD.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/diff_remaps_diff_FD.png  used on input line 283.
+(pdftex.def)             Requested size: 446.69426pt x 356.843pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/betareg.png, id=64, 
+992.70876pt x 754.82pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/betareg.png Gra
+phic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/betareg.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/betareg.png  used on input line 290.
+(pdftex.def)             Requested size: 446.69426pt x 339.65436pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta_nswaps.png, id=
+65, 481.8pt x 408.5664pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta_nswaps.png
+ Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta_nswaps.png>
+
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta_nswaps.png  used on input line 296.
+(pdftex.def)             Requested size: 446.69426pt x 378.8095pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/corr_r
+emapping_chaco.png, id=66, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/c
+orr_remapping_chaco.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/co
+rr_remapping_chaco.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta0/figures/corr_remapping_chaco.png  used on input line 303.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 303--304
+[][] 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/corr_r
+emapping_chaco.png, id=67, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/c
+orr_remapping_chaco.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/co
+rr_remapping_chaco.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta1/figures/corr_remapping_chaco.png  used on input line 309.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 309--310
+[][] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 302--314
+[]$[]$ $[]$ 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/corr_r
+emapping_chaco.png, id=68, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/c
+orr_remapping_chaco.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/co
+rr_remapping_chaco.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta2/figures/corr_remapping_chaco.png  used on input line 316.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 316--317
+[][] 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/corr_r
+emapping_chaco.png, id=69, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/c
+orr_remapping_chaco.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/co
+rr_remapping_chaco.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta3/figures/corr_remapping_chaco.png  used on input line 322.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 322--323
+[][] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 315--327
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/baseli
+neFM_remaps_s1s2.png, id=70, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/b
+aselineFM_remaps_s1s2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/ba
+selineFM_remaps_s1s2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta0/figures/baselineFM_remaps_s1s2.png  used on input line 334.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 334--335
+[][] 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/baseli
+neFM_remaps_s1s2.png, id=71, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/b
+aselineFM_remaps_s1s2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/ba
+selineFM_remaps_s1s2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta1/figures/baselineFM_remaps_s1s2.png  used on input line 339.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 339--340
+[][] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 333--343
+[]$[]$ $[]$ 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/baseli
+neFM_remaps_s1s2.png, id=72, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/b
+aselineFM_remaps_s1s2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/ba
+selineFM_remaps_s1s2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta2/figures/baselineFM_remaps_s1s2.png  used on input line 345.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 345--346
+[][] 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/baseli
+neFM_remaps_s1s2.png, id=73, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/b
+aselineFM_remaps_s1s2.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/ba
+selineFM_remaps_s1s2.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta3/figures/baselineFM_remaps_s1s2.png  used on input line 351.
+(pdftex.def)             Requested size: 248.16516pt x 248.15984pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 351--352
+[][] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 344--356
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/remaps
+_recovery_sessionspecific.png, id=74, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/r
+emaps_recovery_sessionspecific.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/re
+maps_recovery_sessionspecific.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta0/figures/remaps_recovery_sessionspecific.png  used on input line 362.
+(pdftex.def)             Requested size: 223.34712pt x 223.34769pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 362--363
+[][] 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/remaps
+_recovery_sessionspecific.png, id=75, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/r
+emaps_recovery_sessionspecific.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/re
+maps_recovery_sessionspecific.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta1/figures/remaps_recovery_sessionspecific.png  used on input line 367.
+(pdftex.def)             Requested size: 223.34712pt x 223.34769pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 367--368
+[][] 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/remaps
+_recovery_sessionspecific.png, id=76, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/r
+emaps_recovery_sessionspecific.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/re
+maps_recovery_sessionspecific.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta2/figures/remaps_recovery_sessionspecific.png  used on input line 375.
+(pdftex.def)             Requested size: 223.34712pt x 223.34769pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 375--376
+[][] 
+ []
+
+</Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/remaps
+_recovery_sessionspecific.png, id=77, 502.0356pt x 502.0356pt>
+File: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/r
+emaps_recovery_sessionspecific.png Graphic file (type png)
+<use /Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta3/figures/re
+maps_recovery_sessionspecific.png>
+Package pdftex.def Info: /Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/beta3/figures/remaps_recovery_sessionspecific.png  used on input line 381.
+(pdftex.def)             Requested size: 223.34712pt x 223.34769pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 381--382
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9
+
+ </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/precision_fullFCs.p
+ng> </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/networks.png>] [
+10 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/allsubjects_chaco
+.pdf>] [11 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/chaco_rem
+ap_noremap.png (PNG copy)>] [12 </Users/emilyolafson/GIT/stroke-graph-matching/
+apaper/figs/beta0/figures/remapping_matrices_S1S2.png (PNG copy)> </Users/emily
+olafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/remapping_matrices_
+S2S3.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs
+/beta0/figures/remapping_matrices_S3S4.png (PNG copy)> </Users/emilyolafson/GIT
+/stroke-graph-matching/apaper/figs/beta0/figures/remapping_matrices_S4S5.png (P
+NG copy)>] [13 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/costm
+at.png (PNG copy)>] [14 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/f
+igs/sum_remaps_yeo.png (PNG copy)>] [15 </Users/emilyolafson/GIT/stroke-graph-m
+atching/apaper/figs/lesionvol_remapss1s2.png (PNG copy)> </Users/emilyolafson/G
+IT/stroke-graph-matching/apaper/figs/lesionload_remapss1s2.png (PNG copy)>]
+[16 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/diff_remaps_diff
+_FD.png (PNG copy)>] [17 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/
+figs/betareg.png>] [18 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/fi
+gs/beta_nswaps.png (PNG copy)>] [19 </Users/emilyolafson/GIT/stroke-graph-match
+ing/apaper/figs/beta0/figures/corr_remapping_chaco.png (PNG copy)> </Users/emil
+yolafson/GIT/stroke-graph-matching/apaper/figs/beta1/figures/corr_remapping_cha
+co.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/b
+eta2/figures/corr_remapping_chaco.png (PNG copy)> </Users/emilyolafson/GIT/stro
+ke-graph-matching/apaper/figs/beta3/figures/corr_remapping_chaco.png (PNG copy)
+>] [20 </Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures
+/baselineFM_remaps_s1s2.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-m
+atching/apaper/figs/beta1/figures/baselineFM_remaps_s1s2.png (PNG copy)> </User
+s/emilyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/baselineFM_r
+emaps_s1s2.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-matching/apape
+r/figs/beta3/figures/baselineFM_remaps_s1s2.png (PNG copy)>] [21 </Users/emilyo
+lafson/GIT/stroke-graph-matching/apaper/figs/beta0/figures/remaps_recovery_sess
+ionspecific.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-matching/apap
+er/figs/beta1/figures/remaps_recovery_sessionspecific.png (PNG copy)> </Users/e
+milyolafson/GIT/stroke-graph-matching/apaper/figs/beta2/figures/remaps_recovery
+_sessionspecific.png (PNG copy)> </Users/emilyolafson/GIT/stroke-graph-matching
+/apaper/figs/beta3/figures/remaps_recovery_sessionspecific.png (PNG copy)>]
+[22
+
+] [23] (./feb25_doc.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                feb25_doc
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'feb25_doc.run.xml'.
 \openout1 = `feb25_doc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12636 strings out of 480608
- 229020 string characters out of 5903631
- 711586 words of memory out of 5000000
- 28386 multiletter control sequences out of 15000+600000
+ 12839 strings out of 480608
+ 239856 string characters out of 5903631
+ 720389 words of memory out of 5000000
+ 28567 multiletter control sequences out of 15000+600000
  542427 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,7n,46p,2608b,1608s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,8n,49p,1442b,1606s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
 usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on feb25_doc.pdf (12 pages, 24591951 bytes).
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on feb25_doc.pdf (23 pages, 30680908 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 197 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

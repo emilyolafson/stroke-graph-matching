@@ -4,14 +4,16 @@
 
 curr_dir=pwd;
 
-data_dir=strcat(curr_dir, '/project/results/');
+data_dir=strcat(curr_dir, '/results/');
 alphas = [0, 0.0025, 0.0075, 0.0125];
 
 % no_alpha, alpha1, alpha2, alpha3
 
-for i=1:4
-    suffixes = {'alpha0', 'alpha1', 'alpha2', 'alpha3'};
-    suffix = char(suffixes(i));
+for i=1
+ %   suffixes = {'alpha0', 'alpha1', 'alpha2', 'alpha3'};
+    suffixes = {'beta0', 'beta1', 'beta2', 'beta3'};
+
+    suffix = char(strcat('alpha0_', suffixes(i)));
     S1S2_np=load(strcat(data_dir, 'cols_S1S2_', suffix, '.txt'));
     S2S3_np=load(strcat(data_dir, 'cols_S2S3_', suffix, '.txt'));
     S3S4_np=load(strcat(data_dir, 'cols_S3S4_', suffix, '.txt'));
@@ -20,6 +22,8 @@ for i=1:4
     S2S3_np=[S2S3_np(1:19,:);zeros(1,268); S2S3_np(20:22,:)];
     S3S4_np=[S3S4_np(1:11,:);zeros(1,268); S3S4_np(12:18,:);zeros(1,268); S3S4_np(19:21,:)];
     S4S5_np=[S4S5_np(1:5,:);zeros(1,268); S4S5_np(6:10,:);zeros(1,268); S4S5_np(11:17,:);zeros(1,268); S4S5_np(18:20,:)];
+    suffix = char(suffixes(i))
+    suffixz = char(strcat('alpha0_', suffixes(i)));
 
     results_dir=strcat(curr_dir, '/project/results/', suffix, '/');
 
@@ -96,16 +100,16 @@ for i=1:4
     saveas(gcf, strcat(results_dir, 'figures/remapping_raster_allsubjects_overtime.png'))
 
     %% Plot remap frequencies on gummibrain
+
+    S1S2_np=load(strcat(data_dir, 'roichanges_S1S2_', suffixz, '.txt'));
+    S2S3_np=load(strcat(data_dir, 'roichanges_S2S3_', suffixz, '.txt'));
+    S3S4_np=load(strcat(data_dir, 'roichanges_S3S4_', suffixz, '.txt'));
+    S4S5_np=load(strcat(data_dir, 'roichanges_S4S5_', suffixz, '.txt'));
     
-    S1S2_np=load(strcat(data_dir, 'roichanges_S1S2_', suffix, '.txt'));
-    S2S3_np=load(strcat(data_dir, 'roichanges_S2S3_', suffix, '.txt'));
-    S3S4_np=load(strcat(data_dir, 'roichanges_S3S4_', suffix, '.txt'));
-    S4S5_np=load(strcat(data_dir, 'roichanges_S4S5_', suffix, '.txt'));
-    
-    gummi_remapfreq(S1S2_np, results_dir, 'S1-S2_remap_gummibrain')
-    gummi_remapfreq(S2S3_np, results_dir, 'S2-S3_remap_gummibrain')
-    gummi_remapfreq(S3S4_np, results_dir, 'S3-S4_remap_gummibrain')
-    gummi_remapfreq(S4S5_np, results_dir, 'S4-S5_remap_gummibrain')
+   % gummi_remapfreq(S1S2_np, results_dir, 'S1-S2_remap_gummibrain')
+   % gummi_remapfreq(S2S3_np, results_dir, 'S2-S3_remap_gummibrain')
+   % gummi_remapfreq(S3S4_np, results_dir, 'S3-S4_remap_gummibrain')
+   % gummi_remapfreq(S4S5_np, results_dir, 'S4-S5_remap_gummibrain')
 
     %% Correlate remap frequency with chaco scores.
     %log(chaco) vs remapping - can you make the points three colors indicating cerebellum
@@ -114,7 +118,7 @@ for i=1:4
     clear chacovol
 
     for i=1:23
-        chacovol{i}=load(strcat(curr_dir,'/chaco/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
+        chacovol{i}=load(strcat(curr_dir,'/data/chaco/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
     end
 
     mean_chacovol=mean(cell2mat(chacovol'));
@@ -149,7 +153,8 @@ for i=1:4
     ylabel('log(mean ChaCo)')
     title('S1-S2')
     ylim([-14, 0])
-     yticks([-14  -10 -6 -2 ])
+    xlim([0 0.7])
+    yticks([-14  -10 -6 -2 ])
     yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
     text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s1s2.rho, 3))],['p: ', sprintf(' %.2g ', results.corr_w_chaco.s1s2.p)]}, 'FontSize', 15)
     b=polyfit(S1S2_np, log(mean_chacovol),1);
@@ -168,6 +173,7 @@ for i=1:4
    yticks([-14  -10 -6 -2 ])
     yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
     ylim([-14, 0])
+    xlim([0 0.7])
     b=polyfit(S2S3_np, log(mean_chacovol),1);
     a=polyval(b,S2S3_np);
     hold on;
@@ -180,6 +186,7 @@ for i=1:4
     ylabel('log(mean ChaCo)')
     title('S3-S4')
     ylim([-14, 0])
+    xlim([0 0.7])
     yticks([-14  -10 -6 -2 ])
     yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
     text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s3s4.rho, 3))],['p: ',sprintf(' %.2g ', results.corr_w_chaco.s3s4.p)]}, 'FontSize', 15)
@@ -197,6 +204,7 @@ for i=1:4
     yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
     title('S4-S5')
     ylim([-14, 0])
+    xlim([0 0.7])
     text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s4s5.rho, 3))],['p: ', sprintf(' %.2g ', results.corr_w_chaco.s4s5.p)]}, 'FontSize', 15)
     idx=isnan(log(mean_chacovol))
     b=polyfit(S4S5_np, log(mean_chacovol),1);
@@ -326,7 +334,7 @@ for i=1:4
     title({'Number of remaps S1-S2 vs.' ,'CST lesion load'})
     xlabel('Total # remaps')
     ylabel('Lesion load on CST')
-   % xlim([0 150])
+    xlim([0 150])
     text(3, 0.024, {['Correlation: ', num2str(round(rho,3))]}, 'FontSize', 20)
     text(3, 0.022, {['p: ', sprintf('%.2g',p)]}, 'FontSize', 20)
     set(gca, 'FontSize', 20)
@@ -352,7 +360,7 @@ for i=1:4
     title({'Baseline Fugl-Meyer scores vs.' ,'sum of remaps S2-S1'})
     xlabel('Total # remaps')
     ylabel('Baseline F-M score')
-  %  xlim([0 200])
+    xlim([0 150])
     ylim([0 105])
     text(75, 90, {['Correlation: ', num2str(round(rho,3))]}, 'FontSize', 20)
     text(75, 84, {['p: ', num2str(round(p, 3))]}, 'FontSize', 20)
@@ -372,6 +380,7 @@ for i=1:4
     idx = isnan(recovery);
     b=polyfit(sum12(~idx), recovery(~idx),1);
     a=polyval(b,sum12);
+    xlim([0 150])
     plot(sum12, a, '-r')
     xlabel('Total # remaps S1-S2')
     ylabel('Change in Fugl-Meyer (last baseline-followup)')
@@ -393,8 +402,8 @@ for i=1:4
     [nr,nc] = size(motor);
     pcolor([motor nan(nr,1); nan(1,nc+1)]);
     colorbar
-    yticks(1.5:.5:23.5)
-    yticklabels({1:.5:23})
+    yticks(1:23)
+    yticklabels({1:23})
     xticks([1 2 3 4 5])
     set(gca,'FontSize', 13)
     title('Fugl-Meyer scores over sessions')
@@ -406,8 +415,8 @@ for i=1:4
     legend('no data')
 
     
-    saveas(gcf, strcat(results_dir, 'figures/FM_overtime.png'))
-    saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png')
+    %saveas(gcf, strcat(results_dir, 'figures/FM_overtime.png'))
+    %saveas(gcf, '/Users/emilyolafson/GIT/stroke-graph-matching/apaper/figs/FM_overtime.png')
 
     fm12=(fm_2-fm_1);
     fm23=(fm_3-fm_2);
@@ -532,7 +541,8 @@ for i=1:4
     close all;
     %% 
     save(strcat(results_dir, 'results.mat'), 'results')
-    
-    
-  
 end
+
+i=1
+
+plot_yeo
