@@ -2,7 +2,7 @@
 % in cells = which node the original node was mapped to. starts at 0
 % because python indexing starts at 0.
 
-curr_dir=pwd;
+curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/cast_data;
 
 data_dir=strcat(curr_dir, '/results/');
 alphas = [0, 0.0025, 0.0075, 0.0125];
@@ -11,13 +11,23 @@ alphas = [0, 0.0025, 0.0075, 0.0125];
 
 for i=1
  %   suffixes = {'alpha0', 'alpha1', 'alpha2', 'alpha3'};
-    suffixes = {'beta0', 'beta1', 'beta2', 'beta3'};
+    suffixes = {'alpha0', 'alpha1', 'beta2', 'beta3'};
 
     suffix = char(strcat('alpha0_', suffixes(i)));
+    suffix='alpha0'
+    
     S1S2_np=load(strcat(data_dir, 'cols_S1S2_', suffix, '.txt'));
     S2S3_np=load(strcat(data_dir, 'cols_S2S3_', suffix, '.txt'));
     S3S4_np=load(strcat(data_dir, 'cols_S3S4_', suffix, '.txt'));
     S4S5_np=load(strcat(data_dir, 'cols_S4S5_', suffix, '.txt'));
+    S1S2_np_sh=load(strcat(data_dir, '10min/cols_S1S2.txt'));
+    S2S3_np_sh=load(strcat(data_dir, '10min/cols_S2S3.txt'))
+    S3S4_np_sn=load(strcat(data_dir, '10min/cols_S3S4.txt'));
+    S4S5_np_sh=load(strcat(data_dir, '10min/cols_S4S5.txt'));
+    
+    [rho,p]=corr(S1S2_np',S1S2_np_sh')
+    imagesc(rho)
+    
 
     S2S3_np=[S2S3_np(1:19,:);zeros(1,268); S2S3_np(20:22,:)];
     S3S4_np=[S3S4_np(1:11,:);zeros(1,268); S3S4_np(12:18,:);zeros(1,268); S3S4_np(19:21,:)];
@@ -101,11 +111,16 @@ for i=1
 
     %% Plot remap frequencies on gummibrain
 
-    S1S2_np=load(strcat(data_dir, 'roichanges_S1S2_', suffixz, '.txt'));
-    S2S3_np=load(strcat(data_dir, 'roichanges_S2S3_', suffixz, '.txt'));
-    S3S4_np=load(strcat(data_dir, 'roichanges_S3S4_', suffixz, '.txt'));
-    S4S5_np=load(strcat(data_dir, 'roichanges_S4S5_', suffixz, '.txt'));
+    %S1S2_np=load(strcat(data_dir, 'roichanges_S1S2_', suffixz, '.txt'));
+    %S2S3_np=load(strcat(data_dir, 'roichanges_S2S3_', suffixz, '.txt'));
+    %S3S4_np=load(strcat(data_dir, 'roichanges_S3S4_', suffixz, '.txt'));
+    %S4S5_np=load(strcat(data_dir, 'roichanges_S4S5_', suffixz, '.txt'));
     
+    S1S2_np=load(strcat(data_dir, 'roichanges_S1S2.txt'));
+    S2S3_np=load(strcat(data_dir, 'roichanges_S2S3.txt'));
+    S3S4_np=load(strcat(data_dir, 'roichanges_S3S4.txt'));
+    S4S5_np=load(strcat(data_dir, 'roichanges_S4S5.txt'));
+   
    % gummi_remapfreq(S1S2_np, results_dir, 'S1-S2_remap_gummibrain')
    % gummi_remapfreq(S2S3_np, results_dir, 'S2-S3_remap_gummibrain')
    % gummi_remapfreq(S3S4_np, results_dir, 'S3-S4_remap_gummibrain')
@@ -295,8 +310,59 @@ for i=1
     sum45(12)=NaN;
     sum45(6)=NaN;
 
+    
+    
     sum_all_swaps=[sum12, sum23, sum34, sum45];
     totalswap=sum(sum_all_swaps,2)
+    
+    
+    %% length scan after motion censoring vs remaps
+    
+    lengt=load('/Users/emilyolafson/GIT/stroke-graph-matching/data/lengthts.mat')
+    lengt=lengt.length_ts;
+    lengt=leng;
+    length12=mean([lengt(:,1),lengt(:,2)],2);
+    length23=mean([lengt(:,2),lengt(:,3)],2);
+    length34=mean([lengt(:,3),lengt(:,4)],2);
+    length45=mean([lengt(:,4),lengt(:,5)],2);
+    
+    [rho,p]=corr(length12, sum12)
+    
+    tiledlayout(2,2,'padding', 'none')
+    nexttile;
+    scatter(length12,sum12, 'k', 'filled')
+    xlabel('Mean TRs S1-S2')
+    ylabel('# Remaps S1-S2')
+    [rho,p]=corr(length12, sum12, 'rows', 'complete', 'Type', 'Spearman')
+    title(['rho=' sprintf('%.2g',rho), ', p=' sprintf('%.2g',p)])
+    set(gca, 'FontSize', 20)
+
+    nexttile;
+    scatter(length23,sum23, 'k', 'filled')
+    xlabel('Mean TRs S2-S3')
+    ylabel('# Remaps S2-S3')
+    [rho,p]=corr(length23, sum23, 'rows', 'complete', 'Type', 'Spearman')
+    title(['rho=' sprintf('%.2g',rho), ', p=' sprintf('%.2g',p)])
+    set(gca, 'FontSize', 20)
+
+    nexttile;
+
+    scatter(length34,sum34, 'k', 'filled')
+    xlabel('Mean TRs S3-S4')
+    ylabel('# Remaps S3-S4')
+    [rho,p]=corr(length34, sum34, 'rows', 'complete', 'Type', 'Spearman')
+    set(gca, 'FontSize', 20)
+
+    title(['rho=' sprintf('%.2g',rho), ', p=' sprintf('%.2g',p)])
+
+    nexttile;
+        
+    [rho,p]=corr(length45, sum45, 'rows', 'complete', 'Type', 'Spearman')
+    scatter(length45,sum45, 'k', 'filled')
+    xlabel('Mean TRs S4-S5')
+    ylabel('# Remaps S4-S5')
+    title(['rho=' sprintf('%.2g',rho), ', p=' sprintf('%.2g',p)])
+    set(gca, 'FontSize', 20)
     
    %% lesion vol. vs remaps
     lesionvol = load('allpts_lesionvol.txt')
