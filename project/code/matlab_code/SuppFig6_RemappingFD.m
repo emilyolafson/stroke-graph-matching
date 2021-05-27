@@ -5,7 +5,53 @@ threshold = 1;
 beta = 1;
 alpha = 0;  % old regularization; not used (use alpha = 0 for all results in paper)
 
-project_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
+curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
+
+%% load cast data in order to find indices that remap
+data_dir=strcat(curr_dir, 'cast_data/results/regularized/')
+S1S2_np=[]
+S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
+
+order=0:267; 
+
+remappings_12=[];
+
+for j=1:13
+    for i=1:268
+        if (S1S2_np(j,i)==order(i))
+            remappings_12(j,i)=0;
+        else
+            remappings_12(j,i)=1;
+        end
+    end
+end
+
+remaps_cast=sum(remappings_12)
+
+%% 28andme -  find indices that remap
+data_dir=strcat(curr_dir, '/28andme/results/regularized/')
+
+S1S2_np=[]
+S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
+
+order=0:267; 
+
+remappings_12=[];
+
+for j=1:6
+    for i=1:268
+        if (S1S2_np(j,i)==order(i))
+            remappings_12(j,i)=0;
+        else
+            remappings_12(j,i)=1;
+        end
+    end
+end
+remaps28=sum(remappings_12);
+
+%% combine all remaps from 28andme and cast dataset
+remapsall=remaps28+remaps_cast
+highremaps_ctl=remapsall>=threshold % cutoff for # of cast windows in which node is remapped
 
 data_dir=strcat(project_dir, 'project/results/precision/');
 

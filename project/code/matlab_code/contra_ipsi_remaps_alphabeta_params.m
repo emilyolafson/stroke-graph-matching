@@ -1,10 +1,10 @@
-% new figures  - instead of L/R split, contra/ipsilesional spltit
-% heat map differences for regularization parameters
-%Plot the heatmap of the remapping across each time point according to the
-%Yeo networks.
 
-% right lesions
+%Plot the remapping across each time point according to the Yeo networks.
+
+% right hemisphere lesions (for stroke subjects - 1 = right, 0 = left)
 rightlesion = [1,1,0,0,1,0,1,1,1,1,0,0 0,1,1,0,0,1,1,1,1,0,1];
+% Calculate remapping within Yeo networks, splitting remapping into whether
+% it occurred in the same or opposite hemisphere as the lesion.
 
 d=1;
 q=1;
@@ -14,14 +14,24 @@ alpha = 0;
 
 curr_dir=pwd;
 %cast data
-data_dir=strcat(curr_dir, '/cast_data/results/regularized/')
+
 a=readmatrix('/Users/emilyolafson/GIT/stroke-graph-matching/project/shen_268_parcellation_networklabels.csv')
 c=a(:,2);
+threshold = 1;
+beta = 1;
+alpha = 0;  % old regularization; not used (use alpha = 0 for all results in paper)
 
+curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
+
+%% load cast data in order to find indices that remap
+data_dir=strcat(curr_dir, 'cast_data/results/regularized/')
 S1S2_np=[]
-S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
+S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
+
 order=0:267; 
+
 remappings_12=[];
+
 for j=1:13
     for i=1:268
         if (S1S2_np(j,i)==order(i))
@@ -32,16 +42,41 @@ for j=1:13
     end
 end
 
-remaps=sum(remappings_12);
-highremaps_ctl=remaps>=threshold; % cutoff for # of cast windows in which node is remapped
+remaps_cast=sum(remappings_12)
 
-% load stroke data
-data_dir=strcat(curr_dir, '/project/results/precision/');
-S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
-S2S3_np=load(strcat(data_dir, 'cols_S2S3_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
-S3S4_np=load(strcat(data_dir, 'cols_S3S4_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
-S4S5_np=load(strcat(data_dir, 'cols_S4S5_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
+%% 28andme -  find indices that remap
+data_dir=strcat(curr_dir, '/28andme/results/regularized/')
 
+S1S2_np=[]
+S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
+
+order=0:267; 
+
+remappings_12=[];
+
+for j=1:6
+    for i=1:268
+        if (S1S2_np(j,i)==order(i))
+            remappings_12(j,i)=0;
+        else
+            remappings_12(j,i)=1;
+        end
+    end
+end
+remaps28=sum(remappings_12);
+
+%% combine all remaps from 28andme and cast dataset
+remapsall=remaps28+remaps_cast
+highremaps_ctl=remapsall>=threshold % cutoff for # of cast windows in which node is remapped
+
+data_dir=strcat(project_dir, 'project/results/precision/');
+
+S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % 
+S2S3_np=load(strcat(data_dir, 'cols_S2S3_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); %
+S3S4_np=load(strcat(data_dir, 'cols_S3S4_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); %
+S4S5_np=load(strcat(data_dir, 'cols_S4S5_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % 
+
+% subjects with missing data
 S2S3_np=[S2S3_np(1:19,:);zeros(1,268); S2S3_np(20:22,:)];
 S3S4_np=[S3S4_np(1:11,:);zeros(1,268); S3S4_np(12:18,:);zeros(1,268); S3S4_np(19:21,:)];
 S4S5_np=[S4S5_np(1:5,:);zeros(1,268); S4S5_np(6:10,:);zeros(1,268); S4S5_np(11:17,:);zeros(1,268); S4S5_np(18:20,:)];
@@ -51,6 +86,7 @@ S2S3_np(:,highremaps_ctl)=NaN;
 S3S4_np(:,highremaps_ctl)=NaN;
 S4S5_np(:,highremaps_ctl)=NaN;
 
+%% Right hemisphere subjects - calculate remapping
 subjects=[1:23];
 rsub=subjects(logical(rightlesion));
 
