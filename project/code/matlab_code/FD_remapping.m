@@ -79,8 +79,12 @@ for i=1:23
             framewise_d{6,5}=0;
             continue
         end
+        
+        % load realignment parameters (rp)
         rp{i,j}=load(strcat(project_dir, 'confounds/rps/SUB', num2str(i), '/rpfunc_S', num2str(j), '.txt'));
         rps=rp{i,j};
+        
+        % calculate framewise displacement (fd)
         clear fd
         for k=2:length(rps)
             for p=1:3 % x y z
