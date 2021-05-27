@@ -5,7 +5,7 @@ This repository contains code to replicate analyses from the paper "Functional r
 ![Thumbnail](thumbnail.png)
 
 1. Extract precision matrices from timeseries data (set diagonals to 0 prior to graph matching)
-	a. project/code/jupyter_code/extract_precision_matrices.ipynb
+	a. `project/code/jupyter_code/extract_precision_matrices.ipynb`
 2. Run graph matching algorithm on precision matrices
 	a. project/code/jupyter_code/graph_matching_precision_regularized_euclidean_stroke.ipynb
 3. Calculate remapping frequencies
