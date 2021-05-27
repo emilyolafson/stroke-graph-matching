@@ -1,12 +1,13 @@
+% Calculate the correlation between framewise displacement & remapping.
 
 close all;
-threshold =1;
+threshold = 1;
 beta = 1;
-alpha = 0;
 
-curr_dir=pwd;
+project_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
+
 %cast data
-data_dir=strcat(curr_dir, '/cast_data/results/regularized/')
+data_dir=strcat(project_dir, '/cast_data/results/regularized/')
 a=readmatrix('/Users/emilyolafson/GIT/stroke-graph-matching/project/shen_268_parcellation_networklabels.csv')
 c=a(:,2);
 S1S2_np=[]
