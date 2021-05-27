@@ -8,7 +8,7 @@ alpha = 0;  % old regularization; not used (use alpha = 0 for all results in pap
 curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
 
 %% load cast data in order to find indices that remap
-data_dir=strcat(curr_dir, 'cast_data/results/regularized/')
+data_dir=strcat(curr_dir, 'data/cast_data/results/regularized/')
 S1S2_np=[]
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
 
@@ -29,7 +29,7 @@ end
 remaps_cast=sum(remappings_12)
 
 %% 28andme -  find indices that remap
-data_dir=strcat(curr_dir, '/28andme/results/regularized/')
+data_dir=strcat(curr_dir, 'data/28andme/results/regularized/')
 
 S1S2_np=[]
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
@@ -127,7 +127,7 @@ for i=1:23
         end
         
         % load realignment parameters (rp)
-        rp{i,j}=load(strcat(project_dir, 'confounds/rps/SUB', num2str(i), '/rpfunc_S', num2str(j), '.txt'));
+        rp{i,j}=load(strcat(project_dir, 'data/rps/SUB', num2str(i), '/rpfunc_S', num2str(j), '.txt'));
         rps=rp{i,j};
         
         % calculate framewise displacement (fd)

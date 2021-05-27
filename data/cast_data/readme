@@ -1,0 +1,23 @@
+cast-induced plasticity data. main folder: /cast_data/
+- subject 1 has TR of 2.2s, subject 2 and 3 have TRs of 1.1s
+- subject 2 and 3 were downsampled to have an effective TR of 2.2s.
+- "short" timerseries were obtained to have ~14 mins of data (same as mean stroke pts.)
+	- subject 1: 360 TRs, subject 2/3: 720 TRs, downsampled to 360.
+- timeseries are all in /timeseries
+- conn processing on colossus.
+- subject 1: sub1
+- subject 2 & 3: sub2_new, sub3_new
+
+order to perform graph matching:
+1. extract_covariance_cast.m --> covariance_short
+2. extract_precision_matrices-cast.m --> precision_short/FCprec_concat_allsub.mat
+3. unpack_precision_mats() --> precision_short/sub1, sub2, ...
+4. merge_precision_mats_cast.m --> precision_short/C_precision.mat 
+	- sets diagonal of precision matrices to 0 before grpah matching
+5. graph_matching_precision_regularized_euclidean_cast.ipynb --> results
+
+results/regularized:
+- with euclidean distance regularization
+
+review results:
+
