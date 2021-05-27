@@ -3,44 +3,23 @@
 close all;
 threshold = 1;
 beta = 1;
+alpha = 0;  % old regularization; not used (use alpha = 0 for all results in paper)
 
 project_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
 
-%cast data
-data_dir=strcat(project_dir, '/cast_data/results/regularized/')
-a=readmatrix('/Users/emilyolafson/GIT/stroke-graph-matching/project/shen_268_parcellation_networklabels.csv')
-c=a(:,2);
-S1S2_np=[]
-S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
+data_dir=strcat(project_dir, 'project/results/precision/');
 
-order=0:267; 
+S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % 
+S2S3_np=load(strcat(data_dir, 'cols_S2S3_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); %
+S3S4_np=load(strcat(data_dir, 'cols_S3S4_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); %
+S4S5_np=load(strcat(data_dir, 'cols_S4S5_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % 
 
-remappings_12=[];
-
-for j=1:13
-    for i=1:268
-        if (S1S2_np(j,i)==order(i))
-            remappings_12(j,i)=0;
-        else
-            remappings_12(j,i)=1;
-        end
-    end
-end
-
-remaps=sum(remappings_12)
-imagesc(remappings_12);
-data_dir=strcat(curr_dir, '/project/results/precision/');
-
-S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
-S2S3_np=load(strcat(data_dir, 'cols_S2S3_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
-S3S4_np=load(strcat(data_dir, 'cols_S3S4_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
-S4S5_np=load(strcat(data_dir, 'cols_S4S5_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % no regularization.
 S2S3_np=[S2S3_np(1:19,:);zeros(1,268); S2S3_np(20:22,:)];
 S3S4_np=[S3S4_np(1:11,:);zeros(1,268); S3S4_np(12:18,:);zeros(1,268); S3S4_np(19:21,:)];
 S4S5_np=[S4S5_np(1:5,:);zeros(1,268); S4S5_np(6:10,:);zeros(1,268); S4S5_np(11:17,:);zeros(1,268); S4S5_np(18:20,:)];
 
 
-%% Get remapping matrices (1/0)
+%% Get remapping matrices - 1 or 0 based on whether a node was remapped or not.
 order=1:268;
 S1S2_np=S1S2_np+1;
 S2S3_np=S2S3_np+1;
@@ -72,12 +51,8 @@ for j=1:23
     end
 end
 
-remappings_12(:,highremaps_ctl)=NaN
-remappings_23(:,highremaps_ctl)=NaN
-remappings_34(:,highremaps_ctl)=NaN
-remappings_45(:,highremaps_ctl)=NaN
-
-% motion.
+% Load realignment parameters (from CONN) and calculate framewise
+% displacement
 for i=1:23
     for j=1:5
         if (j==3 && i==20)
@@ -104,14 +79,14 @@ for i=1:23
             framewise_d{6,5}=0;
             continue
         end
-        rp{i,j}=load(strcat('confounds/rps/SUB', num2str(i), '/rpfunc_S', num2str(j), '.txt'));
+        rp{i,j}=load(strcat(project_dir, 'confounds/rps/SUB', num2str(i), '/rpfunc_S', num2str(j), '.txt'));
         rps=rp{i,j};
         clear fd
         for k=2:length(rps)
-            for p=1:3
+            for p=1:3 % x y z
                 fd(k-1,p)=rps(k-1,p)-rps(k,p);
             end
-            for p=4:6
+            for p=4:6 % roll pitch yaw
                 fd(k-1,p)=rps(k-1,p)*50-rps(k,p)*50;
             end 
             fd=sum(abs(fd),2);
@@ -135,6 +110,7 @@ sum_45_remappings(20)=NaN;
 sum_45_remappings(12)=NaN;
 sum_45_remappings(6)=NaN;
 
+% plot: avg. framewise displacement vs. sum of remaps between sessions
 tiledlayout(2,2,'padding', 'none')
 nexttile;
 scatter(mean(framewised(:,1),2)-mean(framewised(:,2),2),sum_12_remappings,'ko','filled')
