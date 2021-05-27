@@ -1,5 +1,5 @@
 % Calculate the correlation between framewise displacement & remapping.
-
+clear all;
 close all;
 threshold = 1;
 beta = 1;
@@ -53,7 +53,7 @@ remaps28=sum(remappings_12);
 remapsall=remaps28+remaps_cast
 highremaps_ctl=remapsall>=threshold % cutoff for # of cast windows in which node is remapped
 
-data_dir=strcat(project_dir, 'project/results/precision/');
+data_dir=strcat(curr_dir, 'project/results/precision/');
 
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % 
 S2S3_np=load(strcat(data_dir, 'cols_S2S3_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); %
@@ -127,7 +127,7 @@ for i=1:23
         end
         
         % load realignment parameters (rp)
-        rp{i,j}=load(strcat(project_dir, 'data/rps/SUB', num2str(i), '/rpfunc_S', num2str(j), '.txt'));
+        rp{i,j}=load(strcat(curr_dir, 'data/rps/SUB', num2str(i), '/rpfunc_S', num2str(j), '.txt'));
         rps=rp{i,j};
         
         % calculate framewise displacement (fd)

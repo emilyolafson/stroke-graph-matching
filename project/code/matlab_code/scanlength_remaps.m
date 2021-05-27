@@ -114,7 +114,7 @@ remappings_45(:,highremaps_ctl)=NaN
 
 %% length scan after motion censoring vs remaps
 
-length=load('/Users/emilyolafson/GIT/stroke-graph-matching/data/lengthts.mat')
+length=load(strcat(curr_dir, 'data/lengthts.mat'))
 length=length.length_ts;
 
 length(6, 5) =NaN

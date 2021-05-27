@@ -1,5 +1,6 @@
 % Calculate remapping frequencies and display on Gummibrain.
-
+close all;
+clear all;
 alpha=0
 beta=1
 threshold=1
@@ -7,7 +8,7 @@ threshold=1
 curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/'
 
 %load cast data in order to find indices that remap
-data_dir=strcat(curr_dir, '/cast_data/results/regularized/')
+data_dir=strcat(curr_dir, 'data/cast_data/results/regularized/')
 S1S2_np=[]
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
 
@@ -26,10 +27,9 @@ for j=1:13
 end
 
 remaps_cast=sum(remappings_12)
-imagesc(remappings_12);
 
 %% 28andme
-data_dir=strcat(curr_dir, '/28andme/results/regularized/')
+data_dir=strcat(curr_dir, 'data/28andme/results/regularized/')
 a=readmatrix('/Users/emilyolafson/GIT/stroke-graph-matching/project/shen_268_parcellation_networklabels.csv')
 c=a(:,2);
 S1S2_np=[]
@@ -50,10 +50,10 @@ for j=1:6
     end
 end
 remaps28=sum(remappings_12)
-imagesc(remappings_12);
 
 %% combine all remaps from 28andme and cast dataset
 remapsall=remaps28+remaps_cast
+highremaps_ctl=remapsall>=threshold % cutoff for # of cast windows in which node is remapped
 
 
 %% load stroke data
@@ -107,7 +107,6 @@ for j=1:23
     end
 end
 
-highremaps_ctl=remaps>=threshold % cutoff for # of cast windows in which node is remapped
 
 remappings_12(:,highremaps_ctl)=NaN
 remappings_23(:,highremaps_ctl)=NaN

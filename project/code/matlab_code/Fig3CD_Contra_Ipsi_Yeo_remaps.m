@@ -1,6 +1,7 @@
 % Calculate remapping within Yeo networks, splitting remapping into whether
 % it occurred in the same or opposite hemisphere as the lesion.
-
+clear all;
+close all;
 % right hemisphere lesions (for stroke subjects - 1 = right, 0 = left)
 rightlesion = [1,1,0,0,1,0,1,1,1,1,0,0 0,1,1,0,0,1,1,1,1,0,1];
 
@@ -11,7 +12,7 @@ alpha = 0;  % old regularization; not used (use alpha = 0 for all results in pap
 curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
 
 %% load cast data in order to find indices that remap
-data_dir=strcat(curr_dir, 'cast_data/results/regularized/')
+data_dir=strcat(curr_dir, 'data/cast_data/results/regularized/')
 S1S2_np=[]
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
 
@@ -32,7 +33,7 @@ end
 remaps_cast=sum(remappings_12)
 
 %% 28andme -  find indices that remap
-data_dir=strcat(curr_dir, '/28andme/results/regularized/')
+data_dir=strcat(curr_dir, 'data/28andme/results/regularized/')
 
 S1S2_np=[]
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
@@ -56,7 +57,7 @@ remaps28=sum(remappings_12);
 remapsall=remaps28+remaps_cast
 highremaps_ctl=remapsall>=threshold % cutoff for # of cast windows in which node is remapped
 
-data_dir=strcat(project_dir, 'project/results/precision/');
+data_dir=strcat(curr_dir, 'project/results/precision/');
 
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); % 
 S2S3_np=load(strcat(data_dir, 'cols_S2S3_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')); %
