@@ -1,29 +1,36 @@
-function [sums] = yeonetwork_remaps(remapping_freqs)
+function [sums] = yeonetwork_remaps(remapping_freqs, curr_dir)
     % 16 total networks (left and right separated)
-    a=readmatrix(strcat(pwd, '/project/shen_268_parcellation_networklabels.csv'));
+    a=readmatrix(strcat(curr_dir, '/project/shen_268_parcellation_networklabels.csv'));
     Lyeolabels=({'L - Medial frontal', 'L - Frontoparietal', 'L - Default mode', 'L - Subcortical-cerebellum','L - Motor', 'L - Visual I', 'L - Visual II','L - Visual association'});
     Ryeolabels=({'R - Medial frontal', 'R - Frontoparietal', 'R - Default mode', 'R - Subcortical-cerebellum','R - Motor', 'R - Visual I', 'R - Visual II','R - Visual association'});
     allyeolabels=[Ryeolabels,Lyeolabels];
     
     left_a=a(135:268,:);
-    [f,l]=sort(left_a);
-    networksl = f(:,2);
-    for i=1:8
-        sizez(i)=sum(i==f(:,2));
-    end
+    [tmpl,l]=sort(left_a);
+    networksl = tmpl(:,2); % network assignment of LH ROIs
     l=l(:,2)+134;
+    
+    % number of ROIs in LH per network
+    for i=1:8
+        sizel(i)=sum(i==tmpl(:,2));
+    end
+    
     right_a=a(1:134,:);
-    [h,r]=sort(right_a);
-    networksr = h(:,2);
+    [tmpr,r]=sort(right_a);
+    networksr = tmpr(:,2); % network assignment of RH ROIs
     r=r(:,2);
     
-    yeo_labels=[r;l];
+    yeo_labels=[r;l]; % ROIs ordered based on network assignment (R, L and within each R & L, networks 1-8)
     yeo_networks=[networksr; networksl];
-    for i=1:8
-        count{i}=sum(double(networksr==i))
-    end
-    count=cell2mat(count);
     
+    % number of ROIs in RH per network
+    for i=1:8
+        sizer(i)=sum(i==tmpr(:,2));
+    end
+    
+    countr=sizer;
+    countl=sizel;
+
     organized_matrix = remapping_freqs(yeo_labels,yeo_labels);
     organized_matrixll = organized_matrix(135:268,135:268);
     organized_matrixrr = organized_matrix(1:134,1:134);
@@ -34,28 +41,28 @@ function [sums] = yeonetwork_remaps(remapping_freqs)
         for j=1:8
             subnetwork = organized_matrixll(networksl==i, networksl==j);
             sum_networks_ll{i,j} = sum(sum(subnetwork));
-            sum_networks_ll_offdiagonal{i,j} = sum(sum(subnetwork.*~eye(size(subnetwork))))/count(i);
+            sum_networks_ll_offdiagonal{i,j} = sum(sum(subnetwork.*~eye(size(subnetwork))))/countl(i);
         end
     end
     for i=1:8
         for j=1:8
             subnetwork = organized_matrixrr(networksr==i, networksr==j);
             sum_networks_rr{i,j} = sum(sum(subnetwork));
-            sum_networks_rr_offdiagonal{i,j} = sum(sum(subnetwork.*~eye(size(subnetwork))))/count(i);
+            sum_networks_rr_offdiagonal{i,j} = sum(sum(subnetwork.*~eye(size(subnetwork))))/countr(i);
         end
     end   
     for i=1:8
         for j=1:8
             subnetwork = organized_matrixrl(networksr==i, networksl==j);
             sum_networks_rl{i,j} = sum(sum(subnetwork));
-            sum_networks_rl_offdiagonal{i,j} = sum(sum(subnetwork.*~eye(size(subnetwork))))/count(i);
+            sum_networks_rl_offdiagonal{i,j} = sum(sum(subnetwork.*~eye(size(subnetwork))))/countr(i);
         end
     end  
     for i=1:8
         for j=1:8
             subnetwork = organized_matrixlr(networksl==i, networksr==j);
             sum_networks_lr{i,j} = sum(sum(subnetwork));
-            sum_networks_lr_offdiagonal{i,j} = sum(sum(subnetwork.*~eye(size(subnetwork))))/count(i);
+            sum_networks_lr_offdiagonal{i,j} = sum(sum(subnetwork.*~eye(size(subnetwork))))/countl(i);
         end
     end  
     sums1=[sum_networks_rr_offdiagonal,sum_networks_rl_offdiagonal];
