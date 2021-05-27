@@ -1,3 +1,4 @@
-<b> Functional reorganization is related to motor recovery and structural disruption. </b>
+# Functional reorganization is related to motor recovery and structural disruption.
 
+![Thumbnail](thumbnail.png)
 
