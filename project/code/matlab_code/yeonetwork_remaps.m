@@ -1,5 +1,9 @@
 function [sums] = yeonetwork_remaps(remapping_freqs, curr_dir)
-    % 16 total networks (left and right separated)
+    % Calculates the number of remaps within and between Yeo networks
+    % (separated by whether the lesion remaps from left to right, left to
+    % left, right to right, and right to left).
+    % used to generate figure 3 C, D in Fig3CD_Contra_Ipsi_Yeo_remaps.m
+        
     a=readmatrix(strcat(curr_dir, '/project/shen_268_parcellation_networklabels.csv'));
     Lyeolabels=({'L - Medial frontal', 'L - Frontoparietal', 'L - Default mode', 'L - Subcortical-cerebellum','L - Motor', 'L - Visual I', 'L - Visual II','L - Visual association'});
     Ryeolabels=({'R - Medial frontal', 'R - Frontoparietal', 'R - Default mode', 'R - Subcortical-cerebellum','R - Motor', 'R - Visual I', 'R - Visual II','R - Visual association'});
