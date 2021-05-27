@@ -9,8 +9,8 @@ This repository contains code to replicate analyses from the paper "Functional r
 2. Run graph matching algorithm on precision matrices
 	- `project/code/jupyter_code/graph_matching_precision_regularized_euclidean_stroke.ipynb`
 3. Calculate remapping frequencies
-4. Perform analyses
 	- `project/code/matlab_code/Fig3AB_Remapfreq_Gummibrain_plots.m`
+4. Perform analyses
 	- `project/code/matlab_code/Fig3CD_Contra_Ipsi_Yeo_remaps.m`
 	- `project/code/matlab_code/Fig4A_ChaCo_remaps.m`
 	- `project/code/matlab_code/Fig4B_ChaCo_remap_vs_noremap.m`
