@@ -11,7 +11,7 @@ cov_day18.mat
 cov_day19.mat
 cov_day2.mat
 cov_day20.mat
-#cov_day21.mat
+cov_day21.mat
 cov_day22.mat
 cov_day23.mat
 cov_day24.mat
@@ -24,7 +24,7 @@ cov_day3.mat
 cov_day30.mat
 cov_day4.mat
 cov_day5.mat
-cov_day6.mat
+#cov_day6.mat
 cov_day7.mat
 cov_day8.mat
 cov_day9.mat
