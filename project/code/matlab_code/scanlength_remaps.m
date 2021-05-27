@@ -31,8 +31,7 @@ remaps_cast=sum(remappings_12)
 
 %% 28andme -  find indices that remap
 data_dir=strcat(curr_dir, '/28andme/results/regularized/')
-a=readmatrix('/Users/emilyolafson/GIT/stroke-graph-matching/project/shen_268_parcellation_networklabels.csv')
-c=a(:,2);
+
 S1S2_np=[]
 S1S2_np=load(strcat(data_dir, 'cols_S1S2_alpha', num2str(alpha), '_beta', num2str(beta), '.txt')) % no regularization.
 
