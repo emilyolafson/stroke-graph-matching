@@ -2,7 +2,7 @@
 nsess=[5;5;5;5;5;4;5;5;5;5;5;3;5;5;5;5;5;5;5;2;5;5;5]
 nsess(24:47)=5;
 
-for i=1:23
+for i=1:47
     for j=1:nsess(i)
         ts=load(strcat('/Users/emilyolafson/GIT/stroke-graph-matching/data/timeseries/session', num2str(j),'/SUB', num2str(i),'_S', num2str(j), '_shen268_GSR.mat'));
         ts=ts.avg;
@@ -29,23 +29,27 @@ end
 
 %save('/Users/emilyolafson/GIT/stroke-graph-matching/data/lengthts.mat', 'length_ts')
 leng=[]
-for i=1:23
-    for j=1:nsess(i)
-        ts=load(strcat('/Users/emilyolafson/GIT/stroke-graph-matching/data/timeseries/session', num2str(j),'/SUB', num2str(i),'_S', num2str(j), '_shen268_GSR.mat'));
+C_all=[]
+for i=24:47
+    nsess=5
+    if i==6
+        nsess=4
+    end
+    if i==12
+        nsess=3
+    end
+    if i==20
+        nsess=2
+    end
+    disp(i)
+    for j=1:nsess
+        disp(j)
+        ts=load(strcat('/Users/emilyolafson/GIT/dynamic-brainstates/data/timeseries/SUB', num2str(i),'_S', num2str(j), '_shen_GSR.mat'));
         ts=ts.avg;
-        ts=cell2mat(ts);
-%         disp(i)
-%         disp(j)
-%         try
-%           ts=ts(1:200, :);
-%         catch
-%            ts=ts(1:size(ts,1), :);
-%         end
-         leng(i,j)=size(ts,1);
-%         
+        ts=cell2mat(ts);       
         C=cov(ts);
         C_all{i,j}=C;
-        save(strcat('/Users/emilyolafson/GIT/stroke-graph-matching/data/covariance/SUB', num2str(i),'_S', num2str(j), '_shen268_GSR_fc_cov.mat'), 'C');
+        save(strcat('/Users/emilyolafson/GIT/stroke-graph-matching/data/covariance_may29/SUB', num2str(i),'_S', num2str(j), '_shen268_GSR_fc_cov.mat'), 'C');
     end
 end
 

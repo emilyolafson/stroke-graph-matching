@@ -9,11 +9,11 @@
 
 %% save FC to cell array: rows as subjects, columns as sessions
 curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
-subdir=strcat(curr_dir, '/data/precision/')
+subdir=strcat(curr_dir, 'data/precision/')
 fid = fopen(strcat(subdir, 'subjects.txt'));
 
 line1 = fgetl(fid)
-for i=1:109
+for i=1:130
     mat=load(strcat(subdir, line1));
     session = strfind(line1, '_S');
     sub_num = line1(session -2:session - 1)
@@ -35,6 +35,9 @@ precision=precision';
 
 %% Set diagonal to zero
 nsess=[5;5;5;5;5;4;5;5;5;5;5;3;5;5;5;5;5;5;5;2;5;5;5]
+nsess2=ones(24, 1)*5;
+nsess=[nsess;nsess2]
+
 for i=1:23
     for j=1:nsess(i)
         mat=precision{i,j}.C;

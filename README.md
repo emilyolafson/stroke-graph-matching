@@ -18,4 +18,4 @@ This repository contains code to replicate analyses from the paper "Functional r
 	- `project/code/matlab_code/SuppFig5_overlap_lesion_ROIs.m`
 	- `project/code/matlab_code/SuppFig6_RemappingFD.m`
 
-Optional: estimate structural disconnection using the [NeMo tool v2.0](https://kuceyeski-wcm-web.s3.us-east-1.amazonaws.com/upload.html)
+Estimate structural disconnection from lesion masks using the [NeMo tool v2.0](https://kuceyeski-wcm-web.s3.us-east-1.amazonaws.com/upload.html)

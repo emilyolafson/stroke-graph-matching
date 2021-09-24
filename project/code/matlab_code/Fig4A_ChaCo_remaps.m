@@ -76,7 +76,7 @@ for i=1:23
     chacovol{i}=load(strcat(curr_dir, 'data/chaco/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
 end
 
-mean_chacovol=mean(cell2mat(chacovol'));
+mean_chacovol=median(cell2mat(chacovol'));
 
 idx=isnan(S1S2_np);
 

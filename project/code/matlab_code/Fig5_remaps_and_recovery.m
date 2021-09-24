@@ -281,9 +281,10 @@ set(gca,'FontSize', 13)
 %% linear mixed effects model.
 figure('Position', [0 0 1000 700])
 
-tbl=readtable(strcat(curr_dir, 'data/LME_datatable.csv'))
+tbl=readtable(strcat(curr_dir, '/data/LME_datatable.csv'))
 
 lme = fitlme(tbl,'changeFM ~ remapping  + sex + age + scanlength + (1|subject)')
+
 
 randomColors = rand(3,23)';
 scatter(sum12, fm12, 70,randomColors,'filled')
@@ -299,3 +300,5 @@ ylabel('Change in Fugl-Meyer score')
 set(gca, 'FontSize', 20)
 hold on;
 h.Color='r'
+
+
