@@ -1,0 +1,7 @@
+# packages in environment at /Users/emilyolafson/miniforge3/envs/myenv:
+#
+# Name                    Version                   Build  Channel
+matplotlib                3.4.3                    pypi_0    pypi
+numpy                     1.20.1           py39h69a04d8_0    conda-forge
+pandas                    1.2.3            py39ha4bedbf_0    conda-forge
+scipy                     1.6.1            py39h73ea49b_0    conda-forge

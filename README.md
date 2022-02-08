@@ -1,4 +1,4 @@
-### Functional reorganization is related to motor recovery and structural disruption
+### Capture functional network reorganization using graph matching
 
 This repository contains code to replicate analyses from the paper "Functional reorganization is related to motor recovery and structural disruption" by Olafson and colleagues.
 
@@ -8,6 +8,7 @@ This repository contains code to replicate analyses from the paper "Functional r
 	- `project/code/jupyter_code/extract_precision_matrices.ipynb`
 2. Run graph matching algorithm on precision matrices
 	- `project/code/jupyter_code/graph_matching_precision_stroke.ipynb`
+	- General code: `project/code/jupyter_code/graph_matching_generalform.ipynb`
 3. Calculate remapping frequencies
 	- `project/code/matlab_code/calculate_remapping_freq.m`
 4. Perform analyses
