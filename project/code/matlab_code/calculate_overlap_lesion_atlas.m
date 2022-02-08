@@ -1,4 +1,4 @@
-function [overlap_log] = calculate_overlap_lesion_atlas()
+function [overlap_log, overlap_prop] = calculate_overlap_lesion_atlas()
 % calculate lesion overlap with each node of the Shen268 atlas to exclude
 % them from calculation of ChaCo scores. 
 
@@ -14,9 +14,12 @@ for t=1:size(unique(atlas))-1
     region=atlas==t; % only 1's in ROI t
     for i=1:23
         overlap(i,t)=sum(region.*les{i});
+        overlap_prop(i,t)=sum(region.*les{i})/sum(region);
     end
 end
 
+%overlap_log=logical(overlap);
 overlap_log=logical(overlap);
+overlap_prop=overlap_prop;
 end
 

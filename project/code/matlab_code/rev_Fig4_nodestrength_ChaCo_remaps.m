@@ -458,13 +458,13 @@ overlap_log = calculate_overlap_lesion_atlas;
 
 % Calculate ChaCo scores excluding nodes containing the lesion
  for i=1:23
-     chacovol{i}=load(strcat(curr_dir, 'data/chaco/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
+     chacovol{i}=load(strcat(curr_dir, 'data/nemo_oct21_bug/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
      chacovol{i}(overlap_log(i,:))=NaN; % exclude lesioned ROIs
  end
  
 mean_chacovol=median(cell2mat(chacovol'), 'omitnan'); %median ChaCo scores across subjects 
-remapvar=remappingfreq_12;
-tstat=tval(:,1); 
+remapvar=remappingfreq_45;
+tstat=tval(:,4); 
 
 a=readmatrix('/Users/emilyolafson/GIT/stroke-graph-matching/project/shen_268_parcellation_networklabels.csv') % load Shen268 atlas labels
 c=a(:,2);
@@ -483,7 +483,7 @@ for i=1:8 % plot each node with color based on yeo network assignment
 end
 [rho, p]=corr(remapvar, tstat)
 
-text(0.1, 3, sprintf('Corr: %0.2f \n p: %0.2e', rho, p), 'FontSize', 14)
+text(0.5, 2, sprintf('Corr: %0.2f \n p: %0.2e', rho, p), 'FontSize', 14)
 
 Fit = polyfit(remapvar,tstat,1); % x = x data, y = y data, 1 = order of the polynomial i.e a straight line 
 plot(remapvar,polyval(Fit,remapvar))
@@ -503,7 +503,7 @@ end
 
 Fit = polyfit(remapvar,log(mean_chacovol)',1); % x = x data, y = y data, 1 = order of the polynomial i.e a straight line 
 
-text(0.05, -4, sprintf('Corr: %0.2f \n p: %0.2e', rho, p), 'FontSize', 14)
+text(0.05, -2, sprintf('Corr: %0.2f \n p: %0.2e', rho, p), 'FontSize', 14)
 
 plot(remapvar,polyval(Fit,remapvar))
 xlabel('Node remapping frequency')
@@ -519,14 +519,14 @@ for i=1:8
 end
 [rho, p]=corr(tstat, log(mean_chacovol'))
 
-text(1, -4, sprintf('Corr: %0.2f \n p: %0.2e', rho, p), 'FontSize', 14)
+text(1, -2, sprintf('Corr: %0.2f \n p: %0.2e', rho, p), 'FontSize', 14)
 
-yline(-8, '-.b')
+yline(-6, '-.b')
 ylabel('Log(median ChaCo scores)')
 xlabel('T-statistic')
 set(gca, 'FontSize', 14)
 
-saveas(gcf,'stroke-graph-matching/allfigures/maintxt/Fig4_ChaCo_NodeStrength_remap_s12.png')
+saveas(gcf,'allfigures/maintxt/Fig4_ChaCo_NodeStrength_remap_s45_oct21.png')
 
 
 %% 5. Calculate correlation between ChaCo scores, node strength t-stats, and remapping frequencies, above and below a threshold of structural disconnection 
@@ -534,14 +534,14 @@ figure('Position', [0 0 300 400])
 
 tiledlayout(2,1,'padding', 'none')
 % values above ChaCo threshold
-idxes=log(mean_chacovol)>-8; % set threshold
+idxes=log(mean_chacovol)>-6; % set threshold
 nexttile;
 for i=1:8
     idx=c==i;
     scatter(tstat(idx), log(mean_chacovol(idx)), 24, colrs(i,:), 'filled', 'MarkerFaceAlpha', 0.8)
     hold on;
 end
-ylim([-8 -2])
+ylim([-6 -2])
 xlim([-5 5])
 xticks(-5:5)
 xticklabels({'-5', '-4', '-3', '-2', '-1', '0', '1', '2', '3', '4', '5'})
@@ -549,34 +549,37 @@ Fit = polyfit(tstat(idxes),log(mean_chacovol(idxes))',1); % x = x data, y = y da
 plot(tstat(idxes),polyval(Fit,tstat(idxes)))
 
 [rho, p]=corr(tstat(idxes), log(mean_chacovol(idxes)'))
-text(0, -3, sprintf('Corr: %0.2f \n p: %0.2e', rho, p))
+text(1, -3, sprintf('Corr: %0.2f \n p: %0.2e', rho, p))
 ylabel('Log(median ChaCo scores)')
 xlabel('T-statistic')
 set(gca, 'FontSize', 10)
 
-idxes=log(mean_chacovol)<-8;
 nexttile;
+
+idxes=log(mean_chacovol)<-6;
+
 for i=1:8
     idx=c==i;
     scatter(tstat(idx), log(mean_chacovol(idx)), 24, colrs(i,:), 'filled', 'MarkerFaceAlpha', 0.8)
     hold on;
 end
-ylim([-14 -8])
+ylim([-14 -6])
 xticks(-5:5)
 
 xlim([-5 5])
 xticklabels({'-5', '-4', '-3', '-2', '-1', '0', '1', '2', '3', '4', '5'})
 
-Fit = polyfit(tstat(~idxes),log(mean_chacovol(~idxes))',1); % x = x data, y = y data, 1 = order of the polynomial i.e a straight line 
-plot(tstat(~idxes),polyval(Fit,tstat(~idxes)))
+Fit = polyfit(tstat(idxes),log(mean_chacovol(idxes))',1); % x = x data, y = y data, 1 = order of the polynomial i.e a straight line 
+hold on;
+plot(tstat(idxes),polyval(Fit,tstat(idxes)),'r')
 
-[rho, p]=corr(tstat(~idxes), log(mean_chacovol(~idxes)'))
+[rho, p]=corr(tstat(idxes), log(mean_chacovol(idxes)'))
 text(1, -13, sprintf('Corr: %0.2f \n p: %0.2e', rho, p))
 
 ylabel('Log(median ChaCo scores)')
 xlabel('T-statistic')
 set(gca, 'FontSize', 10)
-saveas(gcf,'stroke-graph-matching/allfigures/maintxt/Fig4_ChaCo_NodeStrength_remap_s12_thresholded.png')
+saveas(gcf,'allfigures/maintxt/Fig4_ChaCo_NodeStrength_remap_s45_thresholded_oct21.png')
 
 
 

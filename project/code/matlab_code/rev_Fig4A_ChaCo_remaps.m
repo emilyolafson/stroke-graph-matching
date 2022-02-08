@@ -7,10 +7,8 @@ curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/'
 
  overlap_log = calculate_overlap_lesion_atlas;
  for i=1:23
-     chacovol{i}=load(strcat(curr_dir, 'data/chaco/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
-     chacovol_bin{i}=chacovol{i}>1e-4;
-     %chacovol{i}(overlap_log(i,:))=NaN
-     %chacovol_bin{i}(overlap_log(i,:))=NaN
+     chacovol{i}=load(strcat(curr_dir, 'data/nemo_oct21_bug/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
+     chacovol{i}(overlap_log(i,:))=NaN
  end
  
 chacofreq=cell2mat(chacovol_bin')
@@ -71,7 +69,7 @@ title('S1-S2')
 ylim([-14, 0])
 yticks([-14  -10 -6 -2 ])
 yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
-text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s1s2.rho, 3))],['p < 0.001']}, 'FontSize', 15)
+text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s1s2.rho, 3))],['p = 0.002']}, 'FontSize', 15)
 idz=isnan(remappingfreq_12);
 b=polyfit(remappingfreq_12(~idz), log(mean_chacovol(~idz)),1);
 a=polyval(b,remappingfreq_12(~idz));
@@ -133,7 +131,7 @@ yticklabels({'10^{-14}','10^{-10}','10^{-6}','10^{-2}'})
 title('S4-S5')
 ylim([-14, 0])
 %xlim([0 0.7])
-text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s4s5.rho, 3))],['p < 0.001']}, 'FontSize', 15)
+text(0.05, -1, {['Rho: ', num2str(round(results.corr_w_chaco.s4s5.rho, 3))],['p = 0.02']}, 'FontSize', 15)
 b=polyfit(remappingfreq_45(~idz), log(mean_chacovol(~idz)),1);
 a=polyval(b,remappingfreq_45(~idz));
 hold on;
@@ -143,5 +141,5 @@ set(gca, 'FontSize', 15)
 %% legend
 %nexttile;
 
-saveas(gcf, 'stroke-graph-matching/allfigures/maintxt/precision_FC/rev_Fig4A_ChaCo_remaps.png')
+saveas(gcf, 'allfigures/maintxt/precision_FC/rev_Fig4A_ChaCo_remaps_Oct22_precision5.png')
 %legend(yeolabels)
