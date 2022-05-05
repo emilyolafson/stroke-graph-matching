@@ -107,7 +107,7 @@ figure('Position', [0 0 800 700])
 tiledlayout(2,2, 'padding', 'none')
 nexttile;
 scatter(sum12, fm12,'ko', 'filled')
-[rho(1),p(1)]=partialcorr(sum12,fm12,[length1, length2, lesionvol], 'rows', 'complete', 'Type', 'Pearson')
+[rho(1),p(1)]=partialcorr(sum12,fm12,[length1, length2], 'rows', 'complete', 'Type', 'Pearson')
 results.corr_recovery_remap_sessionspecific.s1s2.p=p;
 results.corr_recovery_remap_sessionspecific.s1s2.rho=rho;
 hold on;
@@ -125,7 +125,7 @@ set(gca,'FontSize', 13)
 
 nexttile;
 scatter(sum23, fm23,'ko', 'filled')
-[rho(2),p(2)]=partialcorr(sum23,fm23, [length2, length3, lesionvol], 'rows', 'complete', 'Type', 'Pearson')
+[rho(2),p(2)]=partialcorr(sum23,fm23, [length2, length3], 'rows', 'complete', 'Type', 'Pearson')
 results.corr_recovery_remap_sessionspecific.s2s3.p=p;
 results.corr_recovery_remap_sessionspecific.s2s3.rho=rho;
 hold on;

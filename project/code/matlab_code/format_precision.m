@@ -10,10 +10,10 @@
 %% save FC to cell array: rows as subjects, columns as sessions
 curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/';
 subdir=strcat(curr_dir, 'data/precision/')
-fid = fopen(strcat(subdir, 'subjects.txt'));
+fid = fopen(strcat(subdir, 'subjects.txt'))
 
 line1 = fgetl(fid)
-for i=1:130
+for i=1:300
     mat=load(strcat(subdir, line1));
     session = strfind(line1, '_S');
     sub_num = line1(session -2:session - 1)
@@ -38,7 +38,20 @@ nsess=[5;5;5;5;5;4;5;5;5;5;5;3;5;5;5;5;5;5;5;2;5;5;5]
 nsess2=ones(24, 1)*5;
 nsess=[nsess;nsess2]
 
-for i=1:23
+for i=1:24
+    for j=1:nsess(i)
+        mat=precision{i,j}.C;
+        mat(logical(eye(268)))=0;
+        C_precision{i,j}=mat;
+    end
+end
+subdir=strcat(curr_dir, 'data/precision/stroke/')
+
+save(strcat(subdir, '/C_precision.mat'), 'C_precision')
+
+
+
+for i=24:47
     for j=1:nsess(i)
         mat=precision{i,j}.C;
         mat(logical(eye(268)))=0;
@@ -46,5 +59,7 @@ for i=1:23
     end
 end
 
-save(strcat(subdir, '/C_precision.mat'), 'C_precision')
+C_precision = C_precision(24:47,:)
+subdir=strcat(curr_dir, 'data/precision/control/')
 
+save(strcat(subdir, '/C_precision.mat'), 'C_precision')

@@ -5,11 +5,11 @@ curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/'
 %% 
 % run calculate_overlap_lesion_atlas;
 
- overlap_log = calculate_overlap_lesion_atlas;
- for i=1:23
-     chacovol{i}=load(strcat(curr_dir, 'data/nemo_oct21_bug/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
-     chacovol{i}(overlap_log(i,:))=NaN
- end
+overlap_log = calculate_overlap_lesion_atlas;
+for i=1:23
+    chacovol{i}=load(strcat(curr_dir, 'data/nemo_oct21_bug/SUB', num2str(i), '_lesion_1mmMNI_shen268_mean_chacovol.csv'));
+    chacovol{i}(overlap_log(i,:))=NaN
+end
  
 chacofreq=cell2mat(chacovol_bin')
 chacofreq=sum(chacofreq)./23;
@@ -141,5 +141,58 @@ set(gca, 'FontSize', 15)
 %% legend
 %nexttile;
 
+remaps=mean([remappingfreq_12, remappingfreq_23, remappingfreq_34, remappingfreq_45]')
+
+idxes=(log(mean_chacovol)>-6).*(tstat < 0)'
+
+for i=1:268
+    if idxes(i)==1
+        color='r'
+    end
+    if idxes(i)==0
+        color='k';
+    end
+    scatter(remaps(i)',log(mean_chacovol(i)), 20, color, 'filled', 'MarkerFaceAlpha', 0.8)
+    hold on
+end
+
+mean_chacovol=median(cell2mat(chacovol'), 'omitnan');
+remapvar=remaps;
+tstat=mean([tval(:,1),tval(:,2),tval(:,3),tval(:,4)]')'
+disconnected =idxes
+
+disconnected = log(mean_chacovol)>-6.5
+T=table(remapvar',mean_chacovol', tstat, logical(disconnected)');
+T.Properties.VariableNames = {'Remapping', 'ChaCo', 'tstatistic', 'dscon'}
+
+mdl=fitlm(T, 'Remapping ~ tstatistic*dscon')
+
+plotInteraction(mdl,'dscon', 'tstatistic', 'predictions')
+set(gca, 'FontSize', 20)
+xlabel('FC node t-statistic (stroke - control)')
+title(sprintf('Interaction of disconnection and FC node \n disruption on remapping'))
+legend('Disconnected', 'No', 'Yes')
+
 saveas(gcf, 'allfigures/maintxt/precision_FC/rev_Fig4A_ChaCo_remaps_Oct22_precision5.png')
 %legend(yeolabels)
+
+% load shen 268 network annotation
+a=readmatrix('/Users/emilyolafson/GIT/stroke-graph-matching/project/shen_268_parcellation_networklabels.csv')
+c=a(:,2);
+yeolabels=({'Medial frontal', 'Frontoparietal', 'Default mode', 'Subcortical-cerebellum','Motor', 'Visual I', 'Visual II','Visual association'});
+sum(unique(c))
+
+for i=1:8
+    mcv=mean_chacovol;
+    sizenetwork=sum(c==i)
+    networkchaco(i)=sum(mcv(c==i))./sizenetwork;
+end
+    
+bar(networkchaco)
+xticks(1:1:8)
+xticklabels(yeolabels)
+xtickangle(90)
+ylabel('Mean ChaCo score') 
+set(gca, 'FontSize', 14)
+
+

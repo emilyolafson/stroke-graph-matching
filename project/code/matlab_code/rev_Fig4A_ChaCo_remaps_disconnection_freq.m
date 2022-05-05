@@ -4,6 +4,8 @@ curr_dir='/Users/emilyolafson/GIT/stroke-graph-matching/'
 
 %% 
 % run calculate_overlap_lesion_atlas;
+load('allremaps_stroke.mat', 'allremaps')
+load('allremaps_control.mat', 'allctl')
 
  overlap_log = calculate_overlap_lesion_atlas;
  for i=1:23
