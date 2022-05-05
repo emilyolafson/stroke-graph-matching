@@ -389,6 +389,17 @@ for j=1:23
     end
 end
 
+stroke_graphmatching(1).permutation_matrices = remappings_12
+stroke_graphmatching(2).permutation_matrices = remappings_23
+stroke_graphmatching(3).permutation_matrices = remappings_34
+stroke_graphmatching(4).permutation_matrices = remappings_45
+
+stroke_graphmatching(1).node_remapping_freq = remappingfreq_12
+stroke_graphmatching(2).node_remapping_freq = remappingfreq_23
+stroke_graphmatching(3).node_remapping_freq = remappingfreq_34
+stroke_graphmatching(4).node_remapping_freq = remappingfreq_45
+
+save(strcat(curr_dir, '/project/results/stroke_graphmatching_outputs.mat'), 'stroke_graphmatching')
 %% NO ADJUSTMENT FOR CONTORL REMAPS 
 data_dir=strcat(curr_dir, '/project/results/stroke/precision/');
 
